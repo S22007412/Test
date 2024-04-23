@@ -5,41 +5,36 @@ main {
 h1 {
     text-align: center;
     font-family: Poppins;
-    font-size: 1.5em;
+    font-size: 7.5vw;
 }
 
 p {
     padding: 0 0;
     text-align: center;
     font-family: Poppins;
-    font-size: 1em;
+    font-size: 5vw;
     font-weight: 600;
 }
 
 .logoubiuv {
-    margin: auto;
-    width: 50%;
+    margin: 10vh auto 20vh auto;
     text-align: center;
-    margin-top: min(50px, 10%);
-    margin-bottom: min(100px, 20%);
 }
 
 .logouv {
-    width: 100%;
-    max-width: 200px;
+    width: 50vw;
+    max-width: 300px;
 }
 
 .logoubiuv h1 {
     text-align: center;
     font-family: Poppins;
-    font-size: 2.3em;
+    font-size: 10vw;
 }
 
 .centerbutton {
-    padding: min(100px, 20%) 20% min(100px, 20%) 20%;
     text-align: center;
-    margin: 0 auto;
-    max-width: 300px;
+    margin: 100px auto;
 }
 
 .button {
@@ -47,11 +42,11 @@ p {
     border: none;
     color: white;
     text-align: center;
-    font-size: 1em;
-    border-radius: 2em;
-    height: 2em;
+    border-radius: 5vw;
+    height: 10vw;
+    width: 50vw;
     vertical-align: middle;
-    
+    margin: 0 auto;
 }
 
 .button p {
