@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logoubiuv {
+    position: relative;
+    right: 500px;
+}
+
+.abi {
+    position: relative;
+    text-align: center;
+    top: 13px;
+    font-size: 30px;
+}
+
+.main {
+    text-align: center;
+}
+
+.logouv {
+    position: relative;
+    width: 150px;
+    left: 300px;
+    bottom: 200px;
+}
+
+.marca {
+    background-color: #0056b3;
+    font-size: 16px;
+    position: relative;
+    width: 180px;
+    height: 40px;
+    top: 7px;
+    left: 1415px;
+    padding-top: 18px;
+    
+}
+
+.enlace { 
+    color: #ffffff;
+}
+
+.admin {
+    width: 400px;
+    height: auto;
+    background-color: black;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+.estudi {
+    width: 400px;
+    height: auto;
+    background-color: black;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.invi {
+    width: 400px;
+    height: auto;
+    background-color: black;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 25px;
+    margin-top: 15px;
+
+}
