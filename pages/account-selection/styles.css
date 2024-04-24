@@ -5,8 +5,8 @@ body {
 }
 
 .logoubiuv {
-    position: relative;
-    right: 500px;
+    height: 24vh;
+    max-width: 100vw;
 }
 
 .abi {
@@ -21,10 +21,11 @@ body {
 }
 
 .logouv {
-    position: relative;
-    width: 150px;
-    left: 300px;
-    bottom: 200px;
+    margin-top: 0.5vh;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 5vh;
+    font-weight: 800;
 }
 
 .marca {

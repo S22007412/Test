@@ -6,7 +6,6 @@ body {
 
 .logoubiuv {
     position: relative;
-    right: 500px;
 }
 
 .abi {
@@ -21,10 +20,7 @@ body {
 }
 
 .logouv {
-    position: relative;
-    width: 150px;
-    left: 300px;
-    bottom: 200px;
+    width: 200px;
 }
 
 .marca {
