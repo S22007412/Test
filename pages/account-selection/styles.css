@@ -1,26 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.ubi {
+    text-align: center;
+    width: 40px;
+    font-size: 100px;
+    border-radius: 25px;
+    vertical-align: middle;
+    margin-top: 150px;
+    margin-right: 90px;
+    padding-left: 15px;
+}
+
+p {
+    padding: 0 0;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2vh;
+    font-weight: 600;
 }
 
 .logoubiuv {
-    height: 24vh;
-    max-width: 100vw;
-}
-
-.abi {
-    position: relative;
-    text-align: center;
-    top: 13px;
-    font-size: 30px;
-}
-
-.main {
-    text-align: center;
+    display: flex;
+    
 }
 
 .logouv {
+    height: 18.5vh;
+    max-width: 85.5 vw;
+    padding-right: 60px;
+    padding-right: 70px;
+    /*margin-right: 10cm;*/
+}
+
+.logoubiuv h1 {
     margin-top: 0.5vh;
     text-align: center;
     font-family: Poppins;
@@ -28,48 +38,76 @@ body {
     font-weight: 800;
 }
 
-.marca {
-    background-color: #0056b3;
-    font-size: 16px;
-    position: relative;
-    width: 180px;
-    height: 40px;
-    top: 7px;
-    left: 1415px;
-    padding-top: 18px;
-    
+.login {
+    height: 24vh;
+    max-width: 100vw; 
 }
 
-.enlace { 
-    color: #ffffff;
+.imglogin {
+    display: flex;
+    justify-content: center;
+    padding-top: 0%;
+}
+
+.centerbutton {
+    font-size: 33px;
+    text-align: center;
+    margin: 10vh auto;
+    margin-top: 0%;
+}
+
+.button {
+    background-color: rgb(2, 2, 2);
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 5vh;
+    height: 4vh;
+    width: 50vw;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.button p {
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0;
 }
 
 .admin {
+    text-align: center;
     width: 400px;
-    height: auto;
     background-color: black;
     font-size: 20px;
     color: #ffffff;
     border-radius: 25px;
+    border: none;
+    vertical-align: middle;
+
 }
 
 .estudi {
+    text-align: center;
     width: 400px;
-    height: auto;
     background-color: black;
     font-size: 20px;
     color: #ffffff;
     border-radius: 25px;
+    border: none;
     margin-top: 15px;
+    vertical-align: middle;
+
 }
 
 .invi {
     width: 400px;
-    height: auto;
+    text-align: center;
     background-color: black;
     font-size: 20px;
     color: #ffffff;
     border-radius: 25px;
+    border: none;
     margin-top: 15px;
+    vertical-align: middle;
 
 }
