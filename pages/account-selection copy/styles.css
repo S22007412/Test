@@ -16,17 +16,17 @@ p {
     font-weight: 600;
 }
 
-.logoubiuv {
+.logo-container {
     display: flex;
     margin: 10vh auto 12.5vh auto;
 }
 
-.logouv {
+.logo-container .logouv {
     height: min(24vh,50vw);
     margin-right: 3vw;
 }
 
-.part1 {
+.logo-container .part1 {
     display:flex;
     align-items: center;
     justify-content: end;
@@ -35,21 +35,30 @@ p {
     text-align: end;
 }
 
-.part2 {
+.logo-container.part2 {
     display:flex;
     align-items: center;
     width: 45vw;
     height: 24vh;
 }
 
-.logoubiuv h1 {
+.logo-container h1 {
     /* Center the text inside the div */
     display: flex;
     align-items: center;
-    height: min(24vh,50vw);
+    height: 24vh;
     font-size: min(5vh, 10vw);
     font-weight: 600;
 }
+
+.icon-people-container {
+    text-align: center;
+}
+
+.icon-people-container .icon-people {
+    height: 20vh;
+}
+
 
 .centerbutton {
     text-align: center;
