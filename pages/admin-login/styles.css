@@ -68,3 +68,38 @@ body {
     margin-top: 15px;
 
 }
+
+.boton {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton:hover {
+    background-color: #003d80;
+}
+
+#password {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 60px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+#username {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
