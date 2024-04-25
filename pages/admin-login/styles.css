@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(to bottom, #0056b3, #00b3b3); 
+    background: linear-gradient(to bottom, #0057b39e, #00b395eb); 
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: Times New Roman, serif;
     margin: 0;
     padding: 0;
 }
@@ -79,7 +79,7 @@ body {
 .input-icon {
     position: absolute;
     top: 36%;
-    left: 70px;
+    left: 78px;
     transform: translateY(-60%);
     width: 30px; 
     height: 30px; 
@@ -94,7 +94,7 @@ body {
 .input-iconn {
     position: absolute;
     top: 27%;
-    left: 70px;
+    left: 75px;
     transform: translateY(-60%);
     width: 33px; 
     height: 37px; 
@@ -106,47 +106,38 @@ body {
     background-image: url('https://png.pngtree.com/png-vector/20191004/ourlarge/pngtree-lock-icon-png-image_1788630.jpg'); /* Ruta de tu imagen de contraseña */
 }
 
-input[type="text"],
-input[type="password"] {
-    padding-left: 40px; /* espacio d las imagenes */
-    width: 300px; /* ancho */
-    height: 40px; /* altura */
-    font-size: 16px; /* tamaño d letre */
-    border: 1px solid #ccc; /* borde */
-    border-radius: 5px; /* bordes redondeados */
-}
-
 .boton {
-    background-color: #0056b3;
+    background-color: #000000;
     color: white;
-    padding: 10px 45px;
+    padding: 15px 50px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    border: 4px solid #cccccc2c;
     font-size: 15px;
 }
 
 .boton:hover {
-    background-color: #003d80;
+    background-color: #000000;
 }
 
 #password {
     width: 300px;
-    height: 30px;
+    height: 35px;
     margin-bottom: 60px;
     padding: 10px;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 4px solid #ccc;
     border-radius: 50px;
 }
 
 #username {
     width: 300px;
-    height: 30px;
+    height: 35px;
     margin-bottom: 30px;
     padding: 10px;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 4px solid #ccc;
     border-radius: 50px;
 }
 
