@@ -1,59 +1,68 @@
-.ubi {
+main {
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+}
+
+h1 {
     text-align: center;
-    width: 40px;
-    font-size: 100px;
-    border-radius: 25px;
-    vertical-align: middle;
-    margin-top: 150px;
-    margin-right: 90px;
-    padding-left: 15px;
+    font-size: 3vh;
 }
 
 p {
     padding: 0 0;
     text-align: center;
-    font-family: Poppins;
     font-size: 2vh;
     font-weight: 600;
 }
 
-.logoubiuv {
+.logo-container {
     display: flex;
-    
+    margin: 5vh auto 5vh auto;
 }
 
-.logouv {
-    height: 18.5vh;
-    max-width: 85.5 vw;
-    padding-right: 60px;
-    padding-right: 70px;
-    /*margin-right: 10cm;*/
+.logo-container .logouv {
+    height: min(24vh,50vw);
+    margin-right: 3vw;
 }
 
-.logoubiuv h1 {
-    margin-top: 0.5vh;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 5vh;
-    font-weight: 800;
-}
-
-.login {
+.logo-container .part1 {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    width: 55vw;
     height: 24vh;
-    max-width: 100vw; 
+    text-align: end;
 }
 
-.imglogin {
-    display: flex;
-    justify-content: center;
-    padding-top: 0%;
+.logo-container.part2 {
+    display:flex;
+    align-items: center;
+    width: 45vw;
+    height: 24vh;
 }
+
+.logo-container h1 {
+    /* Center the text inside the div */
+    display: flex;
+    align-items: center;
+    height: 24vh;
+    font-size: min(5vh, 10vw);
+    font-weight: 600;
+}
+
+.icon-people-container {
+    text-align: center;
+}
+
+.icon-people-container .icon-people {
+    height: 20vh;
+}
+
 
 .centerbutton {
-    font-size: 33px;
     text-align: center;
     margin: 10vh auto;
-    margin-top: 0%;
 }
 
 .button {
@@ -66,48 +75,11 @@ p {
     width: 50vw;
     vertical-align: middle;
     margin: 0 auto;
+    margin-bottom: 1vh;
 }
 
 .button p {
     font-weight: 600;
     text-decoration: underline;
     margin: 0;
-}
-
-.admin {
-    text-align: center;
-    width: 400px;
-    background-color: black;
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 25px;
-    border: none;
-    vertical-align: middle;
-
-}
-
-.estudi {
-    text-align: center;
-    width: 400px;
-    background-color: black;
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 25px;
-    border: none;
-    margin-top: 15px;
-    vertical-align: middle;
-
-}
-
-.invi {
-    width: 400px;
-    text-align: center;
-    background-color: black;
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 25px;
-    border: none;
-    margin-top: 15px;
-    vertical-align: middle;
-
 }
