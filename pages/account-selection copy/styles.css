@@ -18,7 +18,7 @@ p {
 
 .logo-container {
     display: flex;
-    margin: 10vh auto 12.5vh auto;
+    margin: 5vh auto 5vh auto;
 }
 
 .logo-container .logouv {
@@ -75,7 +75,7 @@ p {
     width: 50vw;
     vertical-align: middle;
     margin: 0 auto;
-    margin-bottom: 15px--;
+    margin-bottom: 1vh;
 }
 
 .button p {
