@@ -3,7 +3,7 @@ $serverName = "s22007412-server.database.windows.net";
 $connectionOptions = array(
     "database" => "ubiuv",
     "uid" => "d1rdrd",
-    "pwd" => "derre.UV1!"
+    "pwd" => "ubiuv.UV1!"
 );
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
