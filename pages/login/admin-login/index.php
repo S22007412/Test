@@ -12,7 +12,7 @@
         <div class="logo-container">
             <div class="logoubiuv">
                 <div class="logo-wrapper">
-                <img class="logouv" src="../../assets/logo-uv.png" alt="Logo UV">
+                <img class="logouv" src="../../../assets/logo-uv.png" alt="Logo UV">
             </div>
             <h1>UBIUV</h1>
             <form action="login.php" method="POST">
@@ -26,9 +26,11 @@
                 </div>
                 <button id="loginButton" class="boton">Iniciar Sesión</button>
             </form>
+            <!--
             <?php
                 echo 'php is working';
             ?>
+            -->
         </div>
     </div>
 </body>

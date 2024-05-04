@@ -14,7 +14,7 @@ if ($stmt === false) {
 
 if (sqlsrv_has_rows($stmt)) {
     echo "<script>";
-    echo "window.location = '../admin-main/index.html';";
+    echo "window.location = '../admin/main/intro/index.html';";
     echo "</script>";
 } else {
     echo "<script>";
