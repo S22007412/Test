@@ -7,6 +7,7 @@ main {
 h1 {
     text-align: center;
     font-size: 3vh;
+    margin: 0;
 }
 
 p {
@@ -18,11 +19,11 @@ p {
 
 .logo-container {
     display: flex;
-    margin: 5vh auto 5vh auto;
+    margin: 10vh auto 3vh auto;
 }
 
 .logo-container .logouv {
-    height: min(24vh,50vw);
+    height: 12vh;
     margin-right: 3vw;
 }
 
@@ -30,8 +31,8 @@ p {
     display:flex;
     align-items: center;
     justify-content: end;
-    width: 55vw;
-    height: 24vh;
+    width: 45vw;
+    height: 12vh;
     text-align: end;
 }
 
@@ -39,20 +40,21 @@ p {
     display:flex;
     align-items: center;
     width: 45vw;
-    height: 24vh;
+    height: 12vh;
 }
 
 .logo-container h1 {
     /* Center the text inside the div */
     display: flex;
     align-items: center;
-    height: 24vh;
-    font-size: min(5vh, 10vw);
-    font-weight: 600;
+    height: 12vh;
+    font-size: 4vh;
+    font-weight: 500;
 }
 
 .icon-people-container {
     text-align: center;
+    margin-bottom: -1vh;
 }
 
 .icon-people-container .icon-people {
@@ -62,7 +64,7 @@ p {
 
 .centerbutton {
     text-align: center;
-    margin: 10vh auto;
+    margin: 7vh auto;
 }
 
 .button {
@@ -70,16 +72,16 @@ p {
     border: none;
     color: white;
     text-align: center;
-    border-radius: 5vh;
-    height: 4vh;
-    width: 50vw;
+    border-radius: 2.5vh;
+    height: 5vh;
+    width: 70vw;
     vertical-align: middle;
     margin: 0 auto;
-    margin-bottom: 1vh;
+    margin-bottom: 6.5vh;
 }
 
 .button p {
-    font-weight: 600;
+    font-weight: 620;
     text-decoration: underline;
     margin: 0;
 }
