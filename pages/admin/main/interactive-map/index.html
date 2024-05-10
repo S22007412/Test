@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div class="main">
-            <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true">See full screen</a></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>map</title>
+    <!-- Add Poppins font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Define font-family for elements that should use Poppins */
+        body, h1, button {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logoubiuv">
+            <img class="logouv" src="../../../../assets/logo-uv.png" alt="Logo UV">
+            <div class="ubiuv">
+                <h2>UBIUV</h2>
+            </div>
         </div>
-    </body>
+        <div class="linea"></div>
+        <div class="miu">
+            <div class="texto">
+                <div class="miu">MAPA INTERACTIVO UV</div>
+            </div>
+        </div>
+
+        <div class="facultad">
+            <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></a></p>
+        </div>
+        <div class="quees">
+            <div class="texto">
+                ¿Qué es?
+            </div>
+        </div>
+        <strong class="text">
+            <h1>
+                Un mapa interactivo es una representación digital de un mapa que permite a los usuarios interactuar con él. Esto incluye funciones como desplazarse por el mapa, hacer zoom, activar o desactivar capas de información, y acceder a datos incrustados. Todo esto depende de las capacidades que el método de desarrollo del mapa ofrezca.
+            </h1>
+        </strong>
+        <div class="linea"></div>
+        <div class="navigation">
+            <button><a href="../intro/index.html"><img class="homeicon" src="../../../../assets/icon-home.png" alt="home icon"></a></button>
+            <button><a href="../interactive-map/index.html"><img class="gomapicon" src="../../../../assets/icon-main.png" alt="go map icon"></a></button>
+            <button><img class="optionsicon" src="../../../../assets/icon-menu.png" alt="three lines"></button>
+        </div>
+    </div>
+</body>
 </html>

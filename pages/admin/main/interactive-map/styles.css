@@ -1,0 +1,151 @@
+html {
+    background-color: rgb(55, 54, 54);    
+}
+
+.main {
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: Poppins;
+    text-align: center;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 8%;
+}
+
+.quees {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5vh;
+    height: 7vw;
+    width: 30vw;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    font-size: 5vw;
+}
+
+.text {
+    padding: 0 0;
+    text-align: center;        /* font-family: Poppins; */
+    font-size: 10vw;
+    font-weight: 600;
+}
+
+.facultad {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3.1vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-weight: 100;
+}
+
+h2  {
+    padding: 0 0;
+    text-align: center;
+    /* font-family: Poppins; */
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+
+.ubiuv {
+    margin-top: 8px;
+    vertical-align: middle;
+    height: 10vw;
+    width: 10vw;
+    color: white;
+}
+
+
+.button p {
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.logouv {
+    width: 7vw;
+    height: 10vw;
+    margin-right: 50px;
+    padding-left: 160px;    
+}
+
+.logoubiuv {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 90%;
+    height: 8%;
+}
+
+.logoubiuv .logouv {
+    text-align: left;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linea {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 5vw;
+}
+
+.homeicon {
+    width: 15vw;
+}
+
+.optionsicon {
+    width: 15vw;
+}
+
+.gomapicon {
+    width: 15vw;
+}
+
+button {
+    background-color: rgb(55, 54, 54);    
+}
+
+.miu {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5vh;
+    height: 4.5vw;
+    width: 65vw;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 4vw;
+    display: flex;
+    justify-content: center;
+}
