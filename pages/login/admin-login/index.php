@@ -10,12 +10,22 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Define font-family for elements that should use Poppins */
-        body, h1, p, button {
+        body, h1, p, input, button {
             font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
 <body>
+
+    <div class="title">
+        <a href="../account-selection/index.html">
+        <img class="back" src="../../../assets/icon-arrow-left.png"></a>
+        <h1>Iniciar Sesión</h1>
+        <div class="divisor"></div>
+    </div>
+    
+    
+
 
     <div class="main">
         <div class="logo-container">
@@ -26,14 +36,14 @@
             
             <form action="login.php" method="POST">
                 <div class="input-container">
-                    <span class="input-icon user-icon"></span>
-                    <input type="text" id="username" name="username" placeholder="Correo institucional">
+                    <img class="icon" src="../../../assets/icon-user.png">
+                    <input type="text" id="username" name="username" placeholder="Correo Institucional">
                 </div>
                 <div class="input-container">
-                    <span class="input-iconn password-icon"></span>
+                    <img class="icon" src="../../../assets/icon-lock.jpg">
                     <input type="password" id="password" name="password" placeholder="Contraseña">
                 </div>
-                <button id="loginButton" class="boton">Iniciar Sesión</button>
+                <button id="loginButton" class="button"><p>Iniciar Sesión</p></button>
             </form>
             <!--
             <?php
