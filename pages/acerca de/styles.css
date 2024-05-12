@@ -57,7 +57,7 @@ h2  {
     text-align: center;
     /* font-family: Poppins; */
     font-size: 3.2vh;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 h3 {
@@ -133,9 +133,6 @@ button {
     padding-bottom: 450px;
     margin-bottom: 10%;
 }
-
-
-
 
 .botones {
     justify-content: center;
