@@ -79,7 +79,7 @@ h2  {
 .facultad {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 77%;
     height: 70%;
     margin-top: 30px;
     object-fit: cover;
@@ -105,10 +105,6 @@ h2  {
 }
 
 button {
-    background-color: rgb(55, 54, 54);    
-}
-
-.historia {
     background-color: rgb(255, 255, 255);
     border: none;
     color: rgb(0, 0, 0);
@@ -119,56 +115,12 @@ button {
     vertical-align: middle;
     margin: 0 auto;
     font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
-}
-
-.salones {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
-}
-
-.horarios {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
-}
-
-.comollegar {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: auto;
     padding-bottom: 5px;
     margin-bottom: 10%;
 }
 
 .botones {
     justify-content: center;
+    
 
 }

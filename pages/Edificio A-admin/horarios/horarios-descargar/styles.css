@@ -1,0 +1,188 @@
+html {
+    background-color: rgb(55, 54, 54);    
+}
+
+.main {
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: Poppins;
+    text-align: center;
+}
+
+.logoubiuv {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 90%;
+    height: 8%;
+}
+
+.logouv {
+    width: 7vh;
+    height: 10vh;
+    margin-right: 50px;
+    padding-left: 160px;    
+}
+
+.ubiuv {
+    margin-top: 8px;
+    vertical-align: middle;
+    height: 10vh;
+    width: 10vh;
+    color: white;
+}
+
+.logoubiuv .logouv {
+    text-align: left;
+}
+
+.linea {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 5vh;
+}
+
+h1 {
+    font-size: 3.2vh;
+    font-weight: 900;
+
+}
+
+h2  {
+    text-align: center;
+    /* font-family: Poppins; */
+    font-size: 3.2vh;
+    font-weight: 600;
+}
+
+.miu {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5vh;
+    height: 6vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-weight: 900;
+    justify-content: center;
+}
+
+.fiec {
+    display: flex;
+    justify-content: center;
+}
+
+.facultad {
+    display: flex;
+    justify-content: center;
+    width: 77%;
+    height: 70%;
+    margin-top: 30px;
+    object-fit: cover;
+    margin-bottom: 8%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.homeicon {
+    width: 15vh;
+}
+
+.optionsicon {
+    width: 15vh;
+}
+
+.gomapicon {
+    width: 15vh;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 10%;
+}
+
+.matutino {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 42vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 0%;
+}
+
+.dmatutino {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 25%;
+}
+
+.vespertino {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 42vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 0%;
+}
+
+.dvespertino {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: auto;
+    padding-bottom: 5px;
+    margin-bottom: 10%;
+}
+
+
+.botones {
+    justify-content: center;
+    
+
+}
+
