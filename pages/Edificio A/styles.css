@@ -21,8 +21,8 @@ html {
 }
 
 .logouv {
-    width: 7vw;
-    height: 10vw;
+    width: 7vh;
+    height: 10vh;
     margin-right: 50px;
     padding-left: 160px;    
 }
@@ -30,8 +30,8 @@ html {
 .ubiuv {
     margin-top: 8px;
     vertical-align: middle;
-    height: 10vw;
-    width: 10vw;
+    height: 10vh;
+    width: 10vh;
     color: white;
 }
 
@@ -43,20 +43,19 @@ html {
     height: 5px;
     width: 100%;
     background-color: white;
-    margin-bottom: 5vw;
+    margin-bottom: 5vh;
 }
 
 h1 {
-    font-size: 5.5vw;
+    font-size: 3.2vh;
     font-weight: 900;
 
 }
 
 h2  {
-    padding: 0 0;
     text-align: center;
     /* font-family: Poppins; */
-    font-size: 4vw;
+    font-size: 3.2vh;
     font-weight: 600;
 }
 
@@ -64,16 +63,11 @@ h2  {
     background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 5vh;
-    height: 4.5vw;
-    width: 50vw;
+    height: 6vh;
+    width: 32vh;
     vertical-align: middle;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    padding-top: 1vw;
-    padding-bottom: 4vw;
     font-weight: 900;
-    display: flex;
     justify-content: center;
 }
 
@@ -97,20 +91,17 @@ h2  {
     justify-content: space-evenly;
 }
 
-.texto {
-    font-size:5vw;
-}
 
 .homeicon {
-    width: 15vw;
+    width: 15vh;
 }
 
 .optionsicon {
-    width: 15vw;
+    width: 15vh;
 }
 
 .gomapicon {
-    width: 15vw;
+    width: 15vh;
 }
 
 button {
@@ -123,8 +114,8 @@ button {
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 7vh;
-    height: 8.7vw;
-    width: 50vw;
+    height: 5.2vh;
+    width: 32vh;
     vertical-align: middle;
     margin: 0 auto;
     font-size: 30px;
@@ -138,8 +129,8 @@ button {
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 7vh;
-    height: 8.7vw;
-    width: 50vw;
+    height: 5.2vh;
+    width: 32vh;
     vertical-align: middle;
     margin: 0 auto;
     font-size: 30px;
@@ -153,8 +144,8 @@ button {
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 7vh;
-    height: 8.7vw;
-    width: 50vw;
+    height: 5.2vh;
+    width: 32vh;
     vertical-align: middle;
     margin: 0 auto;
     font-size: 30px;
@@ -168,11 +159,11 @@ button {
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 7vh;
-    height: 8.7vw;
-    width: 50vw;
+    height: 5.2vh;
+    width: 32vh;
     vertical-align: middle;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: auto;
     padding-bottom: 5px;
     margin-bottom: 10%;
 }
