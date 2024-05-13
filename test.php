@@ -4,7 +4,7 @@ session_start(); // Start the session
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['session_type'])) {
         $_SESSION['session_type'] = $_POST['session_type']; // Store the session type
-        header("Location: test2.php"); // Redirect to the next page
+        header("Location: testtrans.php"); // Redirect to the next page
         exit;
     }
 }
