@@ -14,7 +14,7 @@
         <div class="main">
             test
             <br>
-            <button href="test2.php">derre</button>
+            <a href="test2.php">button>derre</button></a>
         </div>
     </body>
 </html>
