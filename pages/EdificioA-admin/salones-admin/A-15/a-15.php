@@ -42,7 +42,13 @@
                     Información
                 </h1>
                 <h3>
-                    Este salón esta acondicionado para la imparticón de clases presencales o híbridas, cuenta con con equipo tal como una televisión y un proyector, con refigeración adecuada y sufucientes fuentes de alimentación para la toma de clases con distintos dispositivos.
+                    <?php
+                        include 'info.php'; 
+                    ?>
+
+                    <!--
+                        Este salón esta acondicionado para la imparticón de clases presencales o híbridas, cuenta con con equipo tal como una televisión y un proyector, con refigeración adecuada y sufucientes fuentes de alimentación para la toma de clases con distintos dispositivos.
+                    -->
                 </h3>
             </div>
             <div class="modificar">
