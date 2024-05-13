@@ -43,6 +43,9 @@
                 </h1>
                 <h3>
                     <?php
+                        $id_edificio = '1';
+                        $id_salon = '1';
+                        
                         include 'info.php'; 
                     ?>
 

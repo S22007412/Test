@@ -2,8 +2,6 @@
 include '../../../../php/connection.php';
 
 // Assuming you have variables $id_edificio and $id_salon defined somewhere earlier
-$id_edificio = '1';
-$id_salon = '1';
 
 $tsql = "SELECT informacion FROM salones WHERE id_edificio='$id_edificio' AND id_salon='$id_salon';";
 
