@@ -5,6 +5,9 @@
 
 <p align="center">Una aplicación de la UV.</p>
 
+<p align="center"><a href="https://github.com/S22007412/UBIUV">GitHub</a></p>
+<p align="center"><a href="http://40.71.39.214/">UBIUV Web</a></p>
+
 <hr>
 
 
