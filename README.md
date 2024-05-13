@@ -13,7 +13,7 @@
 
 Proyecto de la Experiencia Educativa de Programación Orientada a Objetos
 
-#### Integrantes del Equipo
+### Integrantes del Equipo
 
 - Detsi 
 - Jaqi
