@@ -1,11 +1,11 @@
 <?php
 session_start(); // Start the session
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['session_type'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if(isset($_POST['session_type'])) {
         $_SESSION['session_type'] = $_POST['session_type']; // Store the session type
         
-        /*
+        
         if($_SESSION['session_type'] == 'admin') {
             header("Location: 1.html");
         }
@@ -15,12 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if($_SESSION['session_type'] == 'guest') {
             header("Location: 3.html");
         }
-        */
+        
         
         exit;
     }
 }
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="es">
