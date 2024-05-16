@@ -164,7 +164,7 @@ button {
     margin-bottom: 10%;
 }
 
-.edificio {
+.magna {
     background-color: rgb(255, 255, 255);
     border: none;
     color: rgb(0, 0, 0);
@@ -179,6 +179,20 @@ button {
     margin-bottom: 10%;
 }
 
+.actos {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: auto;
+    padding-bottom: 5px;
+    margin-bottom: 10%;
+}
 
 .botones {
     justify-content: center;
