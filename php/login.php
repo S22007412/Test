@@ -24,7 +24,7 @@ if ($stmt) {
 
     if ($result->num_rows > 0) {
         // Admin found, redirect to admin page
-        header("Location: ../../admin/main/intro/index.html");
+        header("Location: ../pages/admin/main/intro/index.php");
         exit();
     } else {
         // No admin found, check regular users
@@ -38,13 +38,13 @@ if ($stmt) {
 
             if ($result2->num_rows > 0) {
                 // Regular user found, redirect to user page
-                header("Location: ../../user/main/index.html");
+                header("Location: ../pages/admin/main/interactive-map/index.php");
                 exit();
             } else {
                 // Neither admin nor regular user found
                 echo "<script>";
                 echo "alert('Usuario incorrecto');";
-                echo "window.location = 'index.php';";
+                echo "window.location = './pages/login/admin-login/index.php';";
                 echo "</script>";
             }
             $stmt2->close();
