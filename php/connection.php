@@ -1,26 +1,22 @@
 <?php
-$serverName = "s22007412-server.database.windows.net";
-$connectionOptions = array(
-    "database" => "ubiuv",
-    "uid" => "d1rdrd",
-    "pwd" => "ubiuv.UV1!"
-);
+$serverName = "159.54.132.159";
+$username = "d1rdrd";
+$password = "ubiuv.UV1!";
+$database = "ubiuv";
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+// Create connection
+$conn = new mysqli($serverName, $username, $password, $database);
 
-if ($conn === false) {
-    die(formatErrors(sqlsrv_errors()));
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . formatErrors($conn->connect_error));
 }
 
-function formatErrors($errors)
+function formatErrors($error)
 {
     // Display errors
     echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
-    foreach ($errors as $error) {
-        echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
-        echo "Code: ". $error['code'] . "<br/>";
-        echo "Message: ". $error['message'] . "<br/>";
-    }
+    echo "Message: " . $error . "<br/>";
 }
 ?>
