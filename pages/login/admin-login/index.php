@@ -49,11 +49,10 @@
                 </div>
                 <button id="loginButton" class="button"><p>Iniciar Sesión</p></button>
             </form>
-            <!--
+            
             <?php
                 echo 'php is working';
             ?>
-            -->
         </div>
     </div>
 </body>
