@@ -1,5 +1,5 @@
 <?php
-$serverName = "159.54.132.159";
+$serverName = "localhost";
 $username = "d1rdrd";
 $password = "ubiuv.UV1!";
 $database = "ubiuv";
