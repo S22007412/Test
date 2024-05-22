@@ -3,6 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+session_start(); // Start the session
+
 include 'connection.php';
 
 // Get the email and password from POST data
@@ -20,7 +22,8 @@ if ($stmt) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Admin found, redirect to admin page
+        // Admin found, set session type to 'admin'
+        $_SESSION['session_type'] = 'admin';
         header("Location: ../pages/admin/main/intro/index.html");
         exit();
     } else {
@@ -34,7 +37,8 @@ if ($stmt) {
             $result2 = $stmt2->get_result();
 
             if ($result2->num_rows > 0) {
-                // Regular user found, redirect to user page
+                // Regular user found, set session type to 'student'
+                $_SESSION['session_type'] = 'student';
                 header("Location: ../pages/admin/main/interactive-map/index.html");
                 exit();
             } else {
@@ -58,10 +62,4 @@ if ($stmt) {
 
 // Close connection
 $conn->close();
-
-function formatErrors($error)
-{
-    // Log or handle errors more gracefully
-    return $error;
-}
 ?>
