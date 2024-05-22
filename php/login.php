@@ -21,7 +21,7 @@ if ($stmt) {
 
     if ($result->num_rows > 0) {
         // Admin found, redirect to admin page
-        header("Location: ../pages/admin/main/intro/index.php");
+        header("Location: ../pages/admin/main/intro/index.html");
         exit();
     } else {
         // No admin found, check regular users
@@ -35,7 +35,7 @@ if ($stmt) {
 
             if ($result2->num_rows > 0) {
                 // Regular user found, redirect to user page
-                header("Location: ../pages/admin/main/interactive-map/index.php");
+                header("Location: ../pages/admin/main/interactive-map/index.html");
                 exit();
             } else {
                 // Neither admin nor regular user found
