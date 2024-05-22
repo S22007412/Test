@@ -1,23 +1,20 @@
 <?php
+// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
 include 'connection.php';
 
-// Assuming email is unique, let's use it for authentication
+// Get the email and password from POST data
 $email = $_POST['username'];
 $pass = $_POST['password'];
 
-// Hash the provided password for comparison
-$hashedPass = hash('sha256', $pass);
-
-// Prepare and execute the query
+// Prepare and execute the query for admin
 $tsql = "SELECT * FROM admin WHERE email=? AND pass=?";
 $stmt = $conn->prepare($tsql);
 
 if ($stmt) {
-    // Bind parameters and execute
+    // Bind parameters and execute for admin
     $stmt->bind_param("ss", $email, $hashedPass);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -49,16 +46,22 @@ if ($stmt) {
             }
             $stmt2->close();
         } else {
-            die("Failed to prepare user statement: " . formatErrors($conn->error));
+            die("Failed to prepare user statement: " . $conn->error);
         }
     }
 
     // Close statement and result
     $stmt->close();
 } else {
-    die("Failed to prepare admin statement: " . formatErrors($conn->error));
+    die("Failed to prepare admin statement: " . $conn->error);
 }
 
 // Close connection
 $conn->close();
+
+function formatErrors($error)
+{
+    // Log or handle errors more gracefully
+    return $error;
+}
 ?>
