@@ -38,7 +38,7 @@
                 <h1>UBIUV</h1>
             </div>
             
-            <form action="../../..login.php" method="POST">
+            <form action="../../../php/login.php" method="POST">
                 <div class="input-container">
                     <img class="icon" src="../../../assets/icon-user.png">
                     <input type="text" id="username" name="username" placeholder="Correo Institucional">
