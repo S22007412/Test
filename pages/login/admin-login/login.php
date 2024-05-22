@@ -4,7 +4,7 @@ include '../../../php/connection.php';
 $email = $_POST['username'];
 $pass = $_POST['password'];
 
-$tsql = "SELECT * FROM administrador WHERE email=? AND pass=?";
+$tsql = "SELECT * FROM admin WHERE email=? AND pass=?";
 $tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
 
 // Prepare and execute first query
