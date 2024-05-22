@@ -1,50 +1,58 @@
 <?php
 include '../../../php/connection.php';
 
+// Assuming email is unique, let's use it for authentication
 $email = $_POST['username'];
 $pass = $_POST['password'];
 
-// Prepare and execute the queries
-$tsql = "SELECT * FROM admin WHERE email=$email AND pass=$pass";
-$tsql2 = "SELECT * FROM usuario WHERE email=$email AND pass=$pass";
+// Hash the provided password for comparison
+$hashedPass = hash('sha256', $pass);
 
+// Prepare and execute the query
+$tsql = "SELECT * FROM admin WHERE email=? AND pass=?";
 $stmt = $conn->prepare($tsql);
-$stmt2 = $conn->prepare($tsql2);
 
-if ($stmt && $stmt2) {
-    // Bind parameters and execute for administrador
-    $stmt->bind_param("ss", $email, $pass);
+if ($stmt) {
+    // Bind parameters and execute
+    $stmt->bind_param("ss", $email, $hashedPass);
     $stmt->execute();
     $result = $stmt->get_result();
-    
-    // Bind parameters and execute for usuario
-    $stmt2->bind_param("ss", $email, $pass);
-    $stmt2->execute();
-    $result2 = $stmt2->get_result();
 
-    // Check results
     if ($result->num_rows > 0) {
-        echo "<script>";
-        echo "window.location = '../../admin/main/intro/index.html';";
-        echo "</script>";
-    } elseif ($result2->num_rows > 0) {
-        echo "<script>";
-        echo "window.location = '../../admin/main/intro/index.html';";
-        echo "</script>";
+        // Admin found, redirect to admin page
+        header("Location: ../../admin/main/intro/index.html");
+        exit();
     } else {
-        echo "<script>";
-        echo "alert('Usuario incorrecto');";
-        echo "window.location = 'index.php';";
-        echo "</script>";
+        // No admin found, check regular users
+        $tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
+        $stmt2 = $conn->prepare($tsql2);
+        if ($stmt2) {
+            // Bind parameters and execute for user
+            $stmt2->bind_param("ss", $email, $hashedPass);
+            $stmt2->execute();
+            $result2 = $stmt2->get_result();
+
+            if ($result2->num_rows > 0) {
+                // Regular user found, redirect to user page
+                header("Location: ../../user/main/index.html");
+                exit();
+            } else {
+                // Neither admin nor regular user found
+                echo "<script>";
+                echo "alert('Usuario incorrecto');";
+                echo "window.location = 'index.php';";
+                echo "</script>";
+            }
+            $stmt2->close();
+        } else {
+            die("Failed to prepare user statement: " . formatErrors($conn->error));
+        }
     }
 
-    // Free results and close statements
-    $stmt->free_result();
-    $stmt2->free_result();
+    // Close statement and result
     $stmt->close();
-    $stmt2->close();
 } else {
-    die("Failed to prepare statements: " . formatErrors($conn->error));
+    die("Failed to prepare admin statement: " . formatErrors($conn->error));
 }
 
 // Close connection
@@ -52,9 +60,7 @@ $conn->close();
 
 function formatErrors($error)
 {
-    // Display errors
-    echo "<h1>SQL Error:</h1>";
-    echo "Error information: <br/>";
-    echo "Message: " . $error . "<br/>";
+    // Log or handle errors more gracefully
+    return $error;
 }
 ?>
