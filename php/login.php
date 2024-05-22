@@ -15,7 +15,7 @@ $stmt = $conn->prepare($tsql);
 
 if ($stmt) {
     // Bind parameters and execute for admin
-    $stmt->bind_param("ss", $email, $hashedPass);
+    $stmt->bind_param("ss", $email, $pass);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -41,7 +41,7 @@ if ($stmt) {
                 // Neither admin nor regular user found
                 echo "<script>";
                 echo "alert('Usuario incorrecto');";
-                echo "window.location = './pages/login/admin-login/index.php';";
+                echo "window.location = '../pages/login/admin-login/index.php';";
                 echo "</script>";
             }
             $stmt2->close();
