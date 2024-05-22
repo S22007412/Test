@@ -4,8 +4,8 @@ include 'connection.php';
 $email = $_POST['username'];
 $pass = $_POST['password'];
 
-$tsql = "SELECT * FROM admin WHERE email=$email AND pass=$pass";
-$tsql2 = "SELECT * FROM usuario WHERE email=$pass AND pass=$pass";
+$tsql = "SELECT * FROM administrador WHERE email=? AND pass=?";
+$tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
 
 // Prepare and execute first query
 $stmt = $conn->prepare($tsql);
@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
     echo "</script>";
 } else if ($result2->num_rows > 0) {
     echo "<script>";
-    echo "window.location = '../../admin/main/interactive-map/index.html';";
+    echo "window.location = '../../admin/main/intro/index.html';";
     echo "</script>";
 } else {
     echo "<script>";
