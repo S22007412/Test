@@ -5,8 +5,8 @@ $email = $_POST['username'];
 $pass = $_POST['password'];
 
 // Prepare and execute the queries
-$tsql = "SELECT * FROM administrador WHERE email=? AND pass=?";
-$tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
+$tsql = "SELECT * FROM admin WHERE email=$email AND pass=$pass";
+$tsql2 = "SELECT * FROM usuario WHERE email=$email AND pass=$pass";
 
 $stmt = $conn->prepare($tsql);
 $stmt2 = $conn->prepare($tsql2);
