@@ -1,68 +1,50 @@
 <?php
 include '../../../php/connection.php';
 
+// Get the POST data
 $email = $_POST['username'];
 $pass = $_POST['password'];
 
-// Create connection
-$conn = new mysqli($serverName, $username, $password, $database);
+// Create a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// Check the connection
 if ($conn->connect_error) {
-    die("Connection failed: " . formatErrors($conn->connect_error));
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// Prepare and execute the queries
-$tsql = "SELECT * FROM administrador WHERE email=? AND pass=?";
-$tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
+// Prepare and bind the statements to prevent SQL injection
+$stmt = $conn->prepare("SELECT * FROM administrador WHERE email=? AND pass=?");
+$stmt->bind_param("ss", $email, $pass);
 
-$stmt = $conn->prepare($tsql);
-$stmt2 = $conn->prepare($tsql2);
+$stmt2 = $conn->prepare("SELECT * FROM usuario WHERE email=? AND pass=?");
+$stmt2->bind_param("ss", $email, $pass);
 
-if ($stmt && $stmt2) {
-    // Bind parameters and execute for administrador
-    $stmt->bind_param("ss", $email, $pass);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    // Bind parameters and execute for usuario
-    $stmt2->bind_param("ss", $email, $pass);
-    $stmt2->execute();
-    $result2 = $stmt2->get_result();
+// Execute the statements
+$stmt->execute();
+$result = $stmt->get_result();
 
-    // Check results
-    if ($result->num_rows > 0) {
-        echo "<script>";
-        echo "window.location = '../../admin/main/intro/index.html';";
-        echo "</script>";
-    } elseif ($result2->num_rows > 0) {
-        echo "<script>";
-        echo "window.location = '../../admin/main/intro/index.html';";
-        echo "</script>";
-    } else {
-        echo "<script>";
-        echo "alert('Usuario incorrecto');";
-        echo "window.location = 'index.php';";
-        echo "</script>";
-    }
+$stmt2->execute();
+$result2 = $stmt2->get_result();
 
-    // Free results and close statements
-    $stmt->free_result();
-    $stmt2->free_result();
-    $stmt->close();
-    $stmt2->close();
+// Check if rows exist in either query
+if ($result->num_rows > 0) {
+    echo "<script>";
+    echo "window.location = '../../admin/main/intro/index.html';";
+    echo "</script>";
+} else if ($result2->num_rows > 0) {
+    echo "<script>";
+    echo "window.location = '../../admin/main/intro/index.html';";
+    echo "</script>";
 } else {
-    die("Failed to prepare statements: " . formatErrors($conn->error));
+    echo "<script>";
+    echo "alert('Usuario incorrecto');";
+    echo "window.location = 'index.php';";
+    echo "</script>";
 }
 
-// Close connection
+// Close the statements and the connection
+$stmt->close();
+$stmt2->close();
 $conn->close();
-
-function formatErrors($error)
-{
-    // Display errors
-    echo "<h1>SQL Error:</h1>";
-    echo "Error information: <br/>";
-    echo "Message: " . $error . "<br/>";
-}
 ?>
