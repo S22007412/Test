@@ -28,7 +28,7 @@ if ($stmt) {
         exit();
     } else {
         // No admin found, check regular users
-        $tsql2 = "SELECT * FROM usuario WHERE email=? AND pass=?";
+        $tsql2 = "SELECT * FROM user WHERE email=? AND pass=?";
         $stmt2 = $conn->prepare($tsql2);
         if ($stmt2) {
             // Bind parameters and execute for user
