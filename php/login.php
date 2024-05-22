@@ -61,10 +61,4 @@ if ($stmt) {
 
 // Close connection
 $conn->close();
-
-function formatErrors($error)
-{
-    // Log or handle errors more gracefully
-    return $error;
-}
 ?>
