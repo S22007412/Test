@@ -29,7 +29,7 @@ if ($stmt) {
         $stmt2 = $conn->prepare($tsql2);
         if ($stmt2) {
             // Bind parameters and execute for user
-            $stmt2->bind_param("ss", $email, $hashedPass);
+            $stmt2->bind_param("ss", $email, $pass);
             $stmt2->execute();
             $result2 = $stmt2->get_result();
 
