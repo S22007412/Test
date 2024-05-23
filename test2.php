@@ -1,3 +1,7 @@
+<?php
+    session_start(); // Start the session
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,12 +56,25 @@
                 </h3>
             </div>
             <?php
-            session_start(); // Start the session
+            
             if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) {
                 ?>
                 <div class="modificar">
                     <button>
-                        Modificar
+                        Admin y estudiante
+                    </button>
+                </div>
+            <?php
+            }
+            ?>
+
+            <?php
+            
+            if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
+                ?>
+                <div class="modificar">
+                    <button>
+                        Admin
                     </button>
                 </div>
             <?php
