@@ -23,8 +23,10 @@ if ($stmt) {
 
     if ($result->num_rows > 0) {
         // Admin found, set session type to 'admin'
-        $_SESSION['session_type'] = 'admin';
-        header("Location: ../pages/admin/main/intro/index.html");
+        //$_SESSION['session_type'] = 'admin';
+        //header("Location: ../pages/admin/main/intro/index.html");
+        include 'set-session-admin.php';
+        
         exit();
     } else {
         // No admin found, check regular users
@@ -38,8 +40,9 @@ if ($stmt) {
 
             if ($result2->num_rows > 0) {
                 // Regular user found, set session type to 'student'
-                $_SESSION['session_type'] = 'student';
-                header("Location: ../pages/admin/main/interactive-map/index.html");
+                //$_SESSION['session_type'] = 'student';
+                //header("Location: ../pages/admin/main/interactive-map/index.html");
+                include 'set-session-student.php';
                 exit();
             } else {
                 // Neither admin nor regular user found
