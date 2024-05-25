@@ -15,6 +15,8 @@ $pass = $_POST['password'];
 $tsql = "SELECT * FROM administrador WHERE correo=? AND contraseña=?";
 $stmt = $conn->prepare($tsql);
 
+$_SESSION['retry'] = 'false';
+
 if ($stmt) {
     // Bind parameters and execute for admin
     $stmt->bind_param("ss", $email, $pass);
