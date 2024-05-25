@@ -15,8 +15,8 @@ Proyecto de la Experiencia Educativa de Programación Orientada a Objetos
 
 ### Integrantes del Equipo
 
-- Detsi 
-- Jaqi
+- palo desi 
+- yaki
 - Luna
 - rodolfo
 - <img src="https://i.ibb.co/M8byDQH/ederserio.png" alt="ederserio" width="100">
