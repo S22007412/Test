@@ -44,7 +44,7 @@ if ($stmt) {
             } else {
                 // Neither admin nor regular user found
                 $_SESSION['retry'] = 'true';
-                //header('Location: ../pages/login/index.php');
+                header('Location: ../pages/login/index.php');
                 exit();
 
             }
