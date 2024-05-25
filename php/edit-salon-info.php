@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_close($conn);
 
     // Redirect back to the main page
-    header("Location: testmodbdd.php");
+    header("Location: ../tests/testmodbdd.php");
     exit();
 }
 ?>
