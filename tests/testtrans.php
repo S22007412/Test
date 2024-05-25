@@ -1,3 +1,7 @@
+<?php
+//session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -8,9 +12,9 @@
     </head>
     <body>
         <div class="main">
-            <button><a href="../interactive-map/index.html">entrar</a></button>
-
-            <button><a href="../../../tests/testmodbdd.php">test modificar bdd</a></button>
+            test
+            <br>
+            <a href="test2.php">button>derre</button></a>
         </div>
     </body>
 </html>
