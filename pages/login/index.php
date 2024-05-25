@@ -22,15 +22,12 @@
 <body>
 
     <div class="title">
-        <a href="../account-selection/index.html">
+        <a href="../../index.php">
         <img class="back" src="../../../assets/icon-arrow-left.png"></a>
         <h1>Iniciar Sesión</h1>
         <div class="divisor"></div>
     </div>
     
-    
-
-
     <div class="main">
         <div class="logo-container">
             <div class="logo-wrapper">
