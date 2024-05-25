@@ -65,10 +65,21 @@
             if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
                 ?>
                 <div class="modificar">
-                    <button>
-                        Admin
-                    </button>
-                </div>
+    <button onclick="showEditForm()">Admin</button>
+    <form id="editForm" action="edit-salon-info.php" method="POST" style="display: none;">
+        <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
+        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+        <input type="hidden" name="id_salon" value="<?php echo $id_salon; ?>">
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+<script>
+function showEditForm() {
+    document.getElementById('editForm').style.display = 'block';
+}
+</script>
+
             <?php
             }
             ?>
