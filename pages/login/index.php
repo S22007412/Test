@@ -51,10 +51,17 @@
             </form>
             
             <?php
-                if ($_SESSION['retry'] == 'true') {
-                    echo 'intenta de nuevo';
-                }
+            
+            if(isset($_SESSION['retry']) && ($_SESSION['retry'] == 'true')) {
+                ?>
+                <div class="retry">
+                    Revisa tus datos e intenta de nuevo
+                </div>
+            <?php
+            }
             ?>
+
+            
         </div>
     </div>
 </body>
