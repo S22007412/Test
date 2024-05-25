@@ -1,5 +1,5 @@
 <?php
-include '../../../../php/connection.php'; // Ensure this includes the correct connection details for MySQL
+include 'connection.php'; // Ensure this includes the correct connection details for MySQL
 
 // Assuming you have variables $id_edificio and $id_salon defined somewhere earlier
 
