@@ -12,7 +12,7 @@ $email = $_POST['username'];
 $pass = $_POST['password'];
 
 // Prepare and execute the query for admin
-$tsql = "SELECT * FROM admin WHERE email=? AND pass=?";
+$tsql = "SELECT * FROM administrador WHERE correo=? AND contraseña=?";
 $stmt = $conn->prepare($tsql);
 
 if ($stmt) {
@@ -27,7 +27,7 @@ if ($stmt) {
         exit();
     } else {
         // No admin found, check regular users
-        $tsql2 = "SELECT * FROM users WHERE email=? AND pass=?";
+        $tsql2 = "SELECT * FROM usuario WHERE correo=? AND contraseña=?";
         $stmt2 = $conn->prepare($tsql2);
         if ($stmt2) {
             // Bind parameters and execute for user
@@ -41,10 +41,10 @@ if ($stmt) {
                 exit();
             } else {
                 // Neither admin nor regular user found
-                echo "<script>";
-                echo "alert('Usuario incorrecto');";
-                echo "window.location = '../pages/login/admin-login/index.php';";
-                echo "</script>";
+                $_SESSION['retry'] = 'true';
+                //header('Location: ../pages/login/index.php');
+                exit();
+
             }
             $stmt2->close();
         } else {

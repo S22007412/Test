@@ -51,6 +51,9 @@
             </form>
             
             <?php
+                if ($_SESSION['retry'] = 'true') {
+                    echo 'intenta de nuevo';
+                }
                 echo 'php is working';
             ?>
         </div>
