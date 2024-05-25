@@ -36,28 +36,43 @@
         <div class="fiec">
             <img class="facultad" src="" alt="FIEC">
         </div>
-        <div class="botones">
-            <div class="info">
-                <h1>
-                    Información
-                </h1>
-                <h3>
-                    texto
-                    <?php
-                        $id_edificio = '1';
-                        $id_salon = '1';
+        
+        <div class="info">
+            <h1>
+                Información
+            </h1>
+            <h3>
+                texto:<br>
+                <?php
+                    $id_edificio = '1';
+                    $id_salon = '1';
 
-                        include '../../../../php/salon-info.php'; 
-                    ?>
-                </h3>
-            </div>
-            <div class="modificar">
-                <h2>
-                    Modificar
-                </h2>
-            </div>
- 
+                    include '../php/salon-info.php'; 
+                ?>
+
+            </h3>
+
+            <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+                <div class="modificar">
+                    <button onclick="showEditForm()">Modificar</button>
+                    <form id="editForm" action="../php/edit-salon-info.php" method="POST" style="display: none;">
+                        <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
+                        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+                        <input type="hidden" name="id_salon" value="<?php echo $id_salon; ?>">
+                        <button type="submit">Guardar</button>
+                    </form>
+                </div>
+
+                <script>
+                function showEditForm() {
+                    document.getElementById('editForm').style.display = 'block';
+                }
+                </script>
+
+            <?php } ?>
+
         </div>
+
         <div class="linea"></div>
         <!-- 
         <div class="navigation">
