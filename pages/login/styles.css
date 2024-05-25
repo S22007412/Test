@@ -109,3 +109,7 @@ body {
     text-decoration: underline;
     margin: 0;
 }
+
+.retry {
+    margin-top: 1vh;
+}
