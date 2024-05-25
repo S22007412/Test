@@ -35,6 +35,7 @@ $_SESSION['retry'] = 'false';
                     <button class="button button1"><p>Comenzar</p></button>
                 </a>
             </div>
+            <div class="button-spacing"></div>
             <div class="button">
                 <form action="php/set-session-guest.php" method="post">
                     <button class="button button1"><p>Invitado</p></button>

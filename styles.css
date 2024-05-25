@@ -19,7 +19,7 @@ p {
 }
 
 .logoubiuv {
-    margin: 10vh auto 12.5vh auto;
+    margin: 10vh auto 5.5vh auto;
     text-align: center;
 }
 
@@ -38,7 +38,7 @@ p {
 
 .centerbutton {
     text-align: center;
-    margin: 10vh auto;
+    margin: 8vh auto;
 }
 
 .button {
@@ -57,4 +57,8 @@ p {
     font-weight: 600;
     text-decoration: underline;
     margin: 0;
+}
+
+.button-spacing {
+    margin-top: 2.5vh;
 }
