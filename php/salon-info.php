@@ -6,7 +6,7 @@ include 'connection.php'; // Ensure this includes the correct connection details
 // Prepare the SQL statement
 $id_edificio = mysqli_real_escape_string($conn, $id_edificio);
 $id_salon = mysqli_real_escape_string($conn, $id_salon);
-$sql = "SELECT informacion FROM salones WHERE id_edificio='$id_edificio' AND id_salon='$id_salon'";
+$sql = "SELECT informacion FROM salon WHERE id_edificio='$id_edificio' AND id_salon='$id_salon'";
 
 // Execute the query
 $result = mysqli_query($conn, $sql);
