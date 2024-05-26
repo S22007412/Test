@@ -1,0 +1,126 @@
+html {
+    background-color: rgb(55, 54, 54);    
+}
+
+/* Header */
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.back-arrow {
+    position: fixed;
+    top: 2.5vh;
+    left: 2.5vh;
+}
+
+.back-arrow .arrow-img {
+    height: 5vh;
+}
+
+.logo-container {
+    display: flex;
+    margin-top: -1vh;
+    background-color: rgb(55, 54, 54);
+    height: 10vh;
+}
+
+.logo-container .logouv {
+    width: auto;
+    max-width: 5vh;
+    height: auto;
+    max-height: 5vh;
+    margin-right: 3vw;
+    
+}
+
+.logo-container .part1 {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    width: 45vw;
+    height: auto;
+    text-align: end;
+}
+
+.logo-container.part2 {
+    width: 45vw;
+    height: 12vh;
+}
+
+.logo-container h1 {
+    display: flex;
+    align-items: center;
+    height: 6.5vh;
+    font-size: 3vh;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+}
+
+.header-separator {
+    width: 84vw;
+    margin: 0 auto;
+    border-bottom: solid 0.35vh rgb(255, 255, 255);
+}
+
+/* Content */
+
+.main {
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    text-align: center;
+}
+
+.edificio-img {
+    margin-bottom: 6vh;
+    max-height: 24vh;
+    max-width: 80vw;
+    border-radius: 1.5vh;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 32vh;
+    vertical-align: middle;
+    margin: 0 auto 4vh;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+/* Footer */
+
+.navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    bottom: 0vh;
+    background-color: rgb(55, 54, 54);
+}
+
+.footer-separator {
+    width: 84vw;
+    margin: 0 auto;
+    margin-bottom: 1.5vh;
+    border-bottom: solid 0.35vh rgb(255, 255, 255);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.icon {
+    height: 5vh;
+    margin: 0 10vw;
+}

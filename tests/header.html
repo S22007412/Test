@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="header" id="header">
+            <h1>test header </h1>
+        </div>
+        <div class="main">
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+            <h1>test</h1><br>
+
+            
+
+
+        </div>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("header");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            </script>
+    </body>
+</html>
