@@ -42,19 +42,20 @@
                     Historia
                 </h1>
             </div>
+            
+            <a href="../salones/A-15/index.php">
             <div class="salones">
                 <h1>
                     Salones
                 </h1>
             </div>
-            <a href="../salones/A-15/index.php">
+            </a>
+
             <div class="horarios">
                 <h1>
                     Horarios
                 </h1>
             </div>
-            </a>
-
             <div class="comollegar">
                 <h1>
                     ¿Cómo llegar?
