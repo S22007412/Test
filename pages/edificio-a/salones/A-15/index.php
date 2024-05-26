@@ -44,6 +44,8 @@
         <div class="info">
             <h1>
                 Información
+                <br>
+                <?php echo($_SESSION['session_type']); ?>
             </h1>
             <h3>
                 texto:<br>
