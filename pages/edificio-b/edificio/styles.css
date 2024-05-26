@@ -2,106 +2,83 @@ html {
     background-color: rgb(55, 54, 54);    
 }
 
-.main {
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
-    font-family: Poppins;
-    text-align: center;
+/* Header */
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
 }
 
-.logoubiuv {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.back-arrow {
+    position: fixed;
+    top: 2.5vh;
+    left: 2.5vh;
+}
+
+.back-arrow .arrow-img {
+    height: 5vh;
+}
+
+.logo-container {
     display: flex;
-    width: 90%;
-    height: 8%;
-}
-
-.logouv {
-    width: 7vh;
+    margin-top: -1vh;
+    background-color: rgb(55, 54, 54);
     height: 10vh;
-    margin-right: 50px;
-    padding-left: 160px;    
 }
 
-.ubiuv {
-    margin-top: 8px;
-    vertical-align: middle;
-    height: 10vh;
-    width: 10vh;
-    color: white;
+.logo-container .logouv {
+    width: auto;
+    max-width: 5vh;
+    height: auto;
+    max-height: 5vh;
+    margin-right: 3vw;
+    
 }
 
-.logoubiuv .logouv {
-    text-align: left;
+.logo-container .part1 {
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    width: 45vw;
+    height: auto;
+    text-align: end;
 }
 
-.linea {
-    height: 5px;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 5vh;
+.logo-container.part2 {
+    width: 45vw;
+    height: 12vh;
 }
 
-h1 {
-    font-size: 3.2vh;
-    font-weight: 900;
-
+.logo-container h1 {
+    display: flex;
+    align-items: center;
+    height: 6.5vh;
+    font-size: 3vh;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
 }
 
-h2  {
-    text-align: center;
-    /* font-family: Poppins; */
-    font-size: 3.2vh;
-    font-weight: 600;
-}
-
-.miu {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5vh;
-    height: 6vh;
-    width: 32vh;
-    vertical-align: middle;
+.header-separator {
+    width: 84vw;
     margin: 0 auto;
-    font-weight: 900;
-    justify-content: center;
+    border-bottom: solid 0.35vh rgb(255, 255, 255);
 }
 
-.fiec {
-    display: flex;
-    justify-content: center;
+/* Content */
+
+.main {
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    text-align: center;
 }
 
-.facultad {
-    display: flex;
-    justify-content: center;
-    width: 77%;
-    height: 70%;
-    margin-top: 30px;
-    object-fit: cover;
-    margin-bottom: 8%;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-.homeicon {
-    width: 15vh;
-}
-
-.optionsicon {
-    width: 15vh;
-}
-
-.gomapicon {
-    width: 15vh;
+.edificio-img {
+    margin-bottom: 6vh;
+    max-height: 24vh;
+    max-width: 80vw;
+    border-radius: 1.5vh;
 }
 
 button {
@@ -113,72 +90,37 @@ button {
     height: 5.2vh;
     width: 32vh;
     vertical-align: middle;
-    margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
+    margin: 0 auto 4vh;
+    font-size: 3vh;
+    font-weight: 600;
 }
 
-.historia {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
+/* Footer */
+
+.navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    bottom: 0vh;
+    background-color: rgb(55, 54, 54);
 }
 
-.salones {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
+.footer-separator {
+    width: 84vw;
     margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
+    margin-bottom: 1.5vh;
+    border-bottom: solid 0.35vh rgb(255, 255, 255);
 }
 
-.horarios {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
-}
-
-.comollegar {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
-    margin: 0 auto;
-    font-size: auto;
-    padding-bottom: 5px;
-    margin-bottom: 10%;
-}
-
-.botones {
+.icon-container {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.icon {
+    height: 5vh;
+    margin: 0 10vw;
 }
