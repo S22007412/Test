@@ -68,8 +68,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <!-- Building Image -->
         <div class="edificio">
             <!-- Use the relative path for the img src attribute -->
-            <img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio B">
-            <!-- <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> -->
+            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> 
+            <!--<img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio B"> -->
         </div>
         
         <?php
