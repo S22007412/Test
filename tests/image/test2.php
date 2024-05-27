@@ -16,7 +16,7 @@ $json_file_path = '/var/www/html/image_paths.json';
 $page_tag = 'fiec';
 
 // Include the image upload logic
-include '/php/image-upload.php';
+include '/var/www/html/php/image-upload.php';
 
 // If no upload, read the current image path from the JSON file
 $image_paths = read_image_paths($json_file_path);
