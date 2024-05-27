@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 // Define the absolute path to the target directory
-$target_dir = "/var/www/html/assets/";
+$target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
 
 echo "Target directory: " . $target_dir . "<br>";
 
@@ -12,11 +12,11 @@ if (!file_exists($target_dir)) {
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
-    $target_file = $target_dir . "edificio-b.png";
+    $target_file = $target_dir . basename($_FILES["new_image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Check if image file is an actual image or fake image
+    // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["new_image"]["tmp_name"]);
     if ($check !== false) {
         echo "File is an image - " . $check["mime"] . ".<br>";
@@ -32,10 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         $uploadOk = 0;
     }
 
-    // Allow only certain file formats
-    $valid_formats = ["jpg", "jpeg", "png", "gif"];
-    $uploaded_file_extension = strtolower(pathinfo($_FILES["new_image"]["name"], PATHINFO_EXTENSION));
-    if (!in_array($uploaded_file_extension, $valid_formats)) {
+    // Allow certain file formats
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
         $uploadOk = 0;
     }
@@ -45,9 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         echo "Sorry, your file was not uploaded.<br>";
     } else {
         if (move_uploaded_file($_FILES["new_image"]["tmp_name"], $target_file)) {
-            echo "The file has been uploaded and renamed to edificio-b.png.<br>";
+            echo "The file " . htmlspecialchars(basename($_FILES["new_image"]["name"])) . " has been uploaded.<br>";
             // Update the image source to the new uploaded file
-            $image_src = "/assets/edificio-b.png";
+            $image_src = $target_file;
         } else {
             echo "Sorry, there was an error uploading your file.<br>";
             echo "Error details: " . print_r(error_get_last(), true) . "<br>";
