@@ -12,6 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
     $target_file = $target_dir . basename($_FILES['new_image']['name']);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
+    // Debug: Output the target file path
+    echo "Target file path: $target_file<br>";
+
     // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES['new_image']['tmp_name']);
     if ($check !== false) {
@@ -41,6 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         // If everything is ok, try to upload file
         if (move_uploaded_file($_FILES['new_image']['tmp_name'], $target_file)) {
             echo "The file " . htmlspecialchars(basename($_FILES['new_image']['name'])) . " has been uploaded.";
+
+            // Debug: Check if file exists after upload
+            if (file_exists($target_file)) {
+                echo "File uploaded successfully and found at $target_file.";
+            } else {
+                echo "File upload appears to have failed, file not found at $target_file.";
+            }
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
