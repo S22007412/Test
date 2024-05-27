@@ -1,5 +1,9 @@
 <?php
+
+$uploadOk = 1; 
+
 // Function to read image paths from JSON file
+
 function read_image_paths($json_file_path) {
     if (file_exists($json_file_path)) {
         $json_data = file_get_contents($json_file_path);
