@@ -1,17 +1,17 @@
 <?php
 session_start(); // Start the session
 
-$target_file = "/assets/fiec.png";
-
-// Define the absolute path to the target directory
-$target_dir = "/var/www/html/assets/";
+// Define the relative path to the target directory
+$relative_target_dir = "/assets/";
+$absolute_target_dir = "/var/www/html/assets/";
 
 // Initialize a flag to determine if the upload is successful
 $uploadOk = 1;
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
-    $target_file = $target_dir . basename($_FILES['new_image']['name']);
+    $target_file = $absolute_target_dir . basename($_FILES['new_image']['name']);
+    $relative_target_file = $relative_target_dir . basename($_FILES['new_image']['name']);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
     // Debug: Output the target file path
@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
             echo "Sorry, there was an error uploading your file.";
         }
     }
+} else {
+    // Default image path if no upload attempt
+    $relative_target_file = $relative_target_dir . "fiec.png";
 }
 ?>
 
@@ -87,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         </div>
         
         <div class="fiec">
-            <!-- The absolute source should be /var/www/html/assets/fiec.png -->
-            <img class="fiec-img" src=<?php echo $target_file ?> alt="FIEC">
+            <!-- Use the relative path for the img src attribute -->
+            <img class="fiec-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="FIEC">
         </div>
         
         <?php
