@@ -1,11 +1,18 @@
 <?php
 session_start(); // Start the session
 
+// Define the absolute path to the target directory
+$target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
+$target_file = $target_dir . "edificio-b.png";
+
+echo "Target directory: " . $target_dir . "<br>";
+
+if (!file_exists($target_dir)) {
+    mkdir($target_dir, 0777, true);
+}
+
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
-    // Directory where the uploaded file will be moved
-    $target_dir = "../../assets/";
-    $target_file = $target_dir . basename($_FILES["new_image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -25,22 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         $uploadOk = 0;
     }
 
-    // Allow certain file formats
-    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
+    // Allow only PNG format
+    if ($imageFileType != "png") {
+        echo "Sorry, only PNG files are allowed.<br>";
         $uploadOk = 0;
     }
 
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.<br>";
-    // if everything is ok, try to upload file
     } else {
-        if (!file_exists($target_dir)) {
-            mkdir($target_dir, 0777, true);
-        }
         if (move_uploaded_file($_FILES["new_image"]["tmp_name"], $target_file)) {
-            echo "The file " . htmlspecialchars(basename($_FILES["new_image"]["name"])) . " has been uploaded.<br>";
+            echo "The file has been uploaded and renamed to edificio-b.png.<br>";
             // Update the image source to the new uploaded file
             $image_src = $target_file;
         } else {
@@ -86,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         ?>
             <div class="modificar">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="file" name="new_image" id="new_image">
+                    <input type="file" name="new_image" id="new_image" accept="image/png">
                     <button type="submit">Modificar</button>
                 </form>
             </div>
