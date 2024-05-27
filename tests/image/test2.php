@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 // Define the absolute path to the target directory
-$target_dir = "/var/www/html/assets/";
+$target_dir = "/../../assets/";
 
 echo $target_dir;
 
