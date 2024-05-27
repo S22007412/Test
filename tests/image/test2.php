@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 // Define the absolute path to the target directory
-$target_dir = "/../../assets/";
+$target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
 
 echo "Target directory: " . $target_dir . "<br>";
 
