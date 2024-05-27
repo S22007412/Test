@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 // Define the absolute path to the target directory
-$target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
+$target_dir = "/var/www/html/assets/";
 
 echo "Target directory: " . $target_dir . "<br>";
 
@@ -34,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
 
     // Allow only certain file formats
     $valid_formats = ["jpg", "jpeg", "png", "gif"];
-    if (!in_array($imageFileType, $valid_formats)) {
+    $uploaded_file_extension = strtolower(pathinfo($_FILES["new_image"]["name"], PATHINFO_EXTENSION));
+    if (!in_array($uploaded_file_extension, $valid_formats)) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
         $uploadOk = 0;
     }
@@ -46,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         if (move_uploaded_file($_FILES["new_image"]["tmp_name"], $target_file)) {
             echo "The file has been uploaded and renamed to edificio-b.png.<br>";
             // Update the image source to the new uploaded file
-            $image_src = $target_file;
+            $image_src = "/assets/edificio-b.png";
         } else {
             echo "Sorry, there was an error uploading your file.<br>";
             echo "Error details: " . print_r(error_get_last(), true) . "<br>";
