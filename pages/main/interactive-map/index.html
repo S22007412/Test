@@ -16,38 +16,47 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="logoubiuv">
-            <img class="logouv" src="../../../assets/logo-uv.png" alt="Logo UV">
-            <div class="ubiuv">
-                <h2>UBIUV</h2>
+    <div class="navbar-fixed-top">      
+        <div class="logo-container">
+            <div class="part1">
+                <img class="logouv" src="/assets/logo-uv.png" alt="Logo UV">
+            </div>
+            <div class="part2">
+                <h1>UBIUV</h1>  
             </div>
         </div>
-        <div class="linea"></div>
-        <div class="miu">
-            <div class="texto">
-                <div>MAPA INTERACTIVO UV</div>
-            </div>
+        <div class="header-separator"></div>
+    </div>
+
+    <div class="main">
+        <div class="title">
+            MAPA INTERACTIVO UV
         </div>
 
-        <div class="facultad">
-            <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>
+        <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/en/map/ubiuv_1058279?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>
         </div>
-        <div class="quees">
-            <div class="texto">
-                ¿Qué es?
-            </div>
+        
+        <div class="ques">
+           ¿Qué es?
         </div>
-        <strong class="text">
-            <h1>
-                Un mapa interactivo es una representación digital de un mapa que permite a los usuarios interactuar con él. Esto incluye funciones como desplazarse por el mapa, hacer zoom, activar o desactivar capas de información, y acceder a datos incrustados. Todo esto depende de las capacidades que el método de desarrollo del mapa ofrezca.
-            </h1>
-        </strong>
-        <div class="linea"></div>
-        <div class="navigation">
-            <button><a href="../intro/index.html"><img class="homeicon" src="../../../assets/icon-home.png" alt="home icon"></a></button>
-            <button><a href="../interactive-map/index.html"><img class="gomapicon" src="../../../assets/icon-main.png" alt="go map icon"></a></button>
-            <button><img class="optionsicon" src="../../../assets/icon-menu.png" alt="three lines"></button>
+        <div class="text">
+            Un mapa interactivo es una representación digital de un mapa que permite a los usuarios interactuar con él. Esto incluye funciones como desplazarse por el mapa, hacer zoom, activar o desactivar capas de información, y acceder a datos incrustados. Todo esto depende de las capacidades que el método de desarrollo del mapa ofrezca.
+        </div>
+    </div>
+
+    <div class="navbar-fixed-bottom">
+        <div class="footer-separator"></div>
+        <div class="icon-container">
+            <a href="/pages/main/intro/index.html">
+                <img class="icon" class="home-icon" src="../../../assets/icon-home.png">
+            </a>
+            <a href="/pages/main/interactive-map/index.html">
+                <img class="icon" src="../../../assets/icon-main.png">
+            </a>
+            <a href="">
+                <img class="icon" src="../../../assets/icon-menu.png">
+            </a>
         </div>
     </div>
 </body>
