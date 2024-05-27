@@ -13,7 +13,7 @@ $absolute_target_dir = "/var/www/html/assets/";
 $json_file_path = '/var/www/html/config/image_paths.json';
 
 // The tag for this specific page
-$page_tag = 'edificio-b';
+$page_tag = 'edificio-e';
 
 // Include the image upload logic
 include '/var/www/html/php/image-upload.php';
@@ -28,7 +28,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no">
-    <title>Edificio B<A></A></title>
+    <title>Edificio E<A></A></title>
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles.css">
@@ -62,14 +62,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 
         <!-- Building Tittle -->
         <div class="edificio">
-            <button>Edificio B</button>
+            <button>Edificio E</button>
         </div>
         
         <!-- Building Image -->
         <div class="edificio">
             <!-- Use the relative path for the img src attribute -->
-            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> 
-            <!--<img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio B"> -->
+            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio E"> 
+            <!--<img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio E"> -->
         </div>
         
         <?php
