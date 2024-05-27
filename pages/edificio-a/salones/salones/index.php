@@ -118,23 +118,23 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <!-- Content Buttons -->
         <div class="botones">
             <div class="historia">
-                <a href="../historia/index.html"><button>
-                    Historia
+                <a href="../A-15/index.php"><button>
+                    A-15
                 </button></a>
             </div>
             <div class="salones">
-                <a href="../salones/salones/index.html"><button>
-                    Salones
+                <a href="../salones/A-16/index.html"><button>
+                    A-16
                 </button></a>
             </div>
             <div class="horarios">
-                <a href="../horarios/horarios/index.html"><button>
+                <a href="../Aula-Magna/index.html"><button>
                     Horarios
                 </button></a>
             </div>
     
             <div class="comollegar">
-                <a href="../como-llegar/como-llegar/index.html"><button>
+                <a href="../Salon-de-Actos/index.html"><button>
                     ¿Cómo llegar?
                 </button></a>
             </div>
