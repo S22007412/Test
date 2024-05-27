@@ -123,7 +123,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                 </button></a>
             </div>
             <div class="salones">
-                <a href="../salones/salones/index.html"><button>
+                <a href="../salones/salones/index.php"><button>
                     Salones
                 </button></a>
             </div>
