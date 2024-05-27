@@ -130,8 +130,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         ?>
             <div class="modificar">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="file" name="new_image" id="new_image">
+                    
                     <button type="submit">Modificar</button>
+                    <input type="file" name="new_image" id="new_image">
                 </form>
             </div>
         <?php
