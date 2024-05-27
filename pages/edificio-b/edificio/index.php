@@ -34,12 +34,26 @@
     </div>
 
     <div class="main">
+
+        <!-- Building Tittle -->
         <div class="edificio">
             <button>Edificio B</button>
         </div>
         
+        <!-- Building Image -->
         <img class="edificio-img" src="../../../assets/facultad.jpg" alt="FIEC">
         
+        <!-- Modify Image Button-->
+        <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+            <style> 
+                .edificio-img {
+                margin-bottom: 4vh;
+                }
+            </style>
+            <br><button class="modify-button">Modificar</button>
+        <?php } ?>
+        
+        <!-- Content Buttons -->
         <div class="botones">
             <div class="historia">
                 <a href="../historia/index.html"><button>
