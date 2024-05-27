@@ -1,6 +1,8 @@
 <?php
 session_start(); // Start the session
 
+$target_file = "/assets/fiec.png";
+
 // Define the absolute path to the target directory
 $target_dir = "/var/www/html/assets/";
 
@@ -86,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         
         <div class="fiec">
             <!-- The absolute source should be /var/www/html/assets/fiec.png -->
-            <img class="fiec-img" src="/assets/fiec.png" alt="FIEC">
+            <img class="fiec-img" src=<?php echo $target_file ?> alt="FIEC">
         </div>
         
         <?php
