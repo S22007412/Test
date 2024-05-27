@@ -5,8 +5,29 @@ session_start(); // Start the session
 $relative_target_dir = "/assets/";
 $absolute_target_dir = "/var/www/html/assets/";
 
+// Define the path to the JSON file that stores the image paths
+$json_file_path = '/var/www/html/image_paths.json';
+
+// The tag for this specific page
+$page_tag = 'fiec';
+
 // Initialize a flag to determine if the upload is successful
 $uploadOk = 1;
+
+// Function to read image paths from JSON file
+function read_image_paths($json_file_path) {
+    if (file_exists($json_file_path)) {
+        $json_data = file_get_contents($json_file_path);
+        return json_decode($json_data, true);
+    }
+    return [];
+}
+
+// Function to write image paths to JSON file
+function write_image_paths($json_file_path, $image_paths) {
+    $json_data = json_encode($image_paths, JSON_PRETTY_PRINT);
+    file_put_contents($json_file_path, $json_data);
+}
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
@@ -17,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
     // Debug: Output the target file path
     echo "Target file path: $target_file<br>";
 
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual image or fake image
     $check = getimagesize($_FILES['new_image']['tmp_name']);
     if ($check !== false) {
         echo "File is an image - " . $check['mime'] . ".";
@@ -50,6 +71,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
             // Debug: Check if file exists after upload
             if (file_exists($target_file)) {
                 echo "File uploaded successfully and found at $target_file.";
+
+                // Read current image paths
+                $image_paths = read_image_paths($json_file_path);
+
+                // Update the path for this page's tag
+                $image_paths[$page_tag] = $relative_target_file;
+
+                // Save the updated paths back to the JSON file
+                write_image_paths($json_file_path, $image_paths);
             } else {
                 echo "File upload appears to have failed, file not found at $target_file.";
             }
@@ -58,8 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         }
     }
 } else {
-    // Default image path if no upload attempt
-    $relative_target_file = $relative_target_dir . "fiec.png";
+    // If no upload, read the current image path from the JSON file
+    $image_paths = read_image_paths($json_file_path);
+    $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag] : $relative_target_dir . "fiec.png";
 }
 ?>
 
