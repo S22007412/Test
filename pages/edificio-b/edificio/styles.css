@@ -89,6 +89,7 @@ button {
     border-radius: 7vh;
     height: 5.2vh;
     width: 32vh;
+    max-width: 80vw;
     vertical-align: middle;
     margin: 0 auto 4vh;
     font-size: 3vh;
@@ -100,9 +101,34 @@ button {
     color: rgb(255, 255, 255);
     height: 3vh;
     width: 20vh;
-    margin-top: -8vh;
     font-size: 2vh;
     font-weight: 600;
+}
+
+.modificar-form {
+    margin-top: -3vh;
+}
+
+.modify-input {
+    
+        width: 350px;
+        width: 20vh;
+        padding: 0.6vh;
+        background: #fff;
+        border-radius: 1.5vh;
+        font-weight: 400;
+        
+      
+}
+
+.accept-button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 3vh;
+    width: 20vh;
+    font-size: 2vh;
+    font-weight: 600;
+    margin-top: 1vh;
 }
 
 /* Footer */

@@ -34,7 +34,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Define font-family for elements that should use Poppins */
-        body, h1, button {
+        body, h1, button, input {
             font-family: 'Poppins', sans-serif;
         }
     </style>
@@ -86,8 +86,9 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             <!-- File upload form (hidden by default) -->
             <div class="modificar-form" style="display: none;">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="file" name="new_image" id="new_image">
-                    <button type="submit">Aceptar</button>
+                    <input class="modify-input" type="file" name="new_image" id="new_image">
+                    <br> 
+                    <button class="accept-button" type="submit">Aceptar</button>
                 </form>
             </div>
         <?php
