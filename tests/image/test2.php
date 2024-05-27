@@ -3,7 +3,6 @@ session_start(); // Start the session
 
 // Define the absolute path to the target directory
 $target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
-$target_file = $target_dir . "edificio-b.png";
 
 echo "Target directory: " . $target_dir . "<br>";
 
@@ -13,10 +12,11 @@ if (!file_exists($target_dir)) {
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
+    $target_file = $target_dir . "edificio-b.png";
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual image or fake image
     $check = getimagesize($_FILES["new_image"]["tmp_name"]);
     if ($check !== false) {
         echo "File is an image - " . $check["mime"] . ".<br>";
@@ -32,9 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         $uploadOk = 0;
     }
 
-    // Allow only PNG format
-    if ($imageFileType != "png") {
-        echo "Sorry, only PNG files are allowed.<br>";
+    // Allow only certain file formats
+    $valid_formats = ["jpg", "jpeg", "png", "gif"];
+    if (!in_array($imageFileType, $valid_formats)) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
         $uploadOk = 0;
     }
 
@@ -89,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         ?>
             <div class="modificar">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="file" name="new_image" id="new_image" accept="image/png">
+                    <input type="file" name="new_image" id="new_image">
                     <button type="submit">Modificar</button>
                 </form>
             </div>
