@@ -108,6 +108,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         body, h1, button {
             font-family: 'Poppins', sans-serif;
         }
+
+        /* Hide the file input and submit button by default */
+        .modificar-form {
+            display: none;
+        }
     </style>
 </head>
 
@@ -128,11 +133,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         <?php
         if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
         ?>
+            <!-- Show the modify button -->
             <div class="modificar">
+                <button id="modifyButton">Modificar</button>
+            </div>
+
+            <!-- File upload form (hidden by default) -->
+            <div class="modificar-form">
                 <form action="" method="post" enctype="multipart/form-data">
-                    
-                    <button type="submit">Modificar</button>
                     <input type="file" name="new_image" id="new_image">
+                    <button type="submit">Modificar</button>
                 </form>
             </div>
         <?php
@@ -140,5 +150,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
         ?>
         <div class="linea"></div>
     </div>
+
+    <script>
+        // JavaScript to toggle visibility of file upload form
+        document.getElementById('modifyButton').addEventListener('click', function() {
+            var form = document.querySelector('.modificar-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
