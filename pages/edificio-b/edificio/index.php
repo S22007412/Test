@@ -13,7 +13,7 @@ $absolute_target_dir = "/var/www/html/assets/";
 $json_file_path = '/var/www/html/config/image_paths.json';
 
 // The tag for this specific page
-$page_tag = 'fiec';
+$page_tag = 'edificio-b';
 
 // Include the image upload logic
 include '/var/www/html/php/image-upload.php';
@@ -44,12 +44,12 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
     <div class="navbar-fixed-top">
         <div class="back-arrow">
             <a href="">
-                <img class="arrow-img" src="../../../assets/icon-arrow-left.png">
+                <img class="arrow-img" src="/assets/icon-arrow-left.png">
             </a>
         </div>        
         <div class="logo-container">
             <div class="part1">
-                <img class="logouv" src="../../../assets/logo-uv.png" alt="Logo UV">
+                <img class="logouv" src="/assets/logo-uv.png" alt="Logo UV">
             </div>
             <div class="part2">
                 <h1>UBIUV</h1>  
@@ -71,15 +71,17 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B">
         </div>
         
-        <!-- Modify Image Button-->
-        <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+        <?php
+        if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
+        ?>
             <!-- Show the modify button -->
+            
             <style> 
                 .edificio-img {
                 margin-bottom: 4vh;
                 }
             </style>
-            <br><button id="modifyButton" class="modify-button">Modificar</button>
+            <br><button class="modify-button" id="modifyButton">Modificar</button>
 
             <!-- File upload form (hidden by default) -->
             <div class="modificar-form">
@@ -91,8 +93,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <?php
         }
         ?>
-
-        
         
         <!-- Content Buttons -->
         <div class="botones">
