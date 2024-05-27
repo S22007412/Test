@@ -4,6 +4,8 @@ session_start(); // Start the session
 // Define the absolute path to the target directory
 $target_dir = realpath(dirname(__FILE__)) . "/../../assets/";
 
+echo $target_dir;
+
 if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
