@@ -93,6 +93,18 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <?php
         }
         ?>
+
+<script>
+        // JavaScript to toggle visibility of file upload form
+        document.getElementById('modifyButton').addEventListener('click', function() {
+            var form = document.querySelector('.modificar-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    </script>
         
         <!-- Content Buttons -->
         <div class="botones">
