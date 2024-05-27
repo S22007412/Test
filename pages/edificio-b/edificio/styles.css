@@ -75,10 +75,39 @@ html {
 }
 
 .edificio-img {
-    margin-bottom: 6vh;
+    margin-bottom: 4vh;
     max-height: 24vh;
     max-width: 80vw;
     border-radius: 1.5vh;
+}
+
+.modify-button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 3vh;
+    width: 20vh;
+    font-size: 2vh;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+
+.modify-input {
+    width: 20vh;
+    padding: 0.6vh;
+    background: #fff;
+    border-radius: 1.5vh;
+    font-weight: 400;
+}
+
+.accept-button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 3vh;
+    width: 20vh;
+    font-size: 2vh;
+    font-weight: 600;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
 }
 
 button {
@@ -94,38 +123,6 @@ button {
     margin: 0 auto 4vh;
     font-size: 3vh;
     font-weight: 600;
-}
-
-.modify-button {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    height: 3vh;
-    width: 20vh;
-    font-size: 2vh;
-    font-weight: 600;
-    margin-top: -8vh;
-}
-
-.modify-input {
-    
-        width: 350px;
-        width: 20vh;
-        padding: 0.6vh;
-        background: #fff;
-        border-radius: 1.5vh;
-        font-weight: 400;
-        
-      
-}
-
-.accept-button {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    height: 3vh;
-    width: 20vh;
-    font-size: 2vh;
-    font-weight: 600;
-    margin-top: 1vh;
 }
 
 /* Footer */

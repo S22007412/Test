@@ -68,28 +68,30 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <!-- Building Image -->
         <div class="edificio">
             <!-- Use the relative path for the img src attribute -->
-            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B">
+            <img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio B">
+            <!-- <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> -->
         </div>
         
         <?php
         if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
         ?>
-            <!-- Show the modify button -->
-            
-            <style> 
+            <style>
                 .edificio-img {
-                margin-bottom: 4vh;
+                margin-bottom: -4vh;
                 }
             </style>
+            <!-- Show the modify button -->
+            <div class="modify-container">
             <br><button class="modify-button" id="modifyButton">Modificar</button>
 
             <!-- File upload form (hidden by default) -->
-            <div class="modificar-form" style="display: none;">
+            <div class="modify-form" style="display: none;">
                 <form action="" method="post" enctype="multipart/form-data">
                     <input class="modify-input" type="file" name="new_image" id="new_image">
                     <br> 
                     <button class="accept-button" type="submit">Aceptar</button>
                 </form>
+            </div>
             </div>
         <?php
         }
@@ -98,11 +100,17 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <script>
         // JavaScript to toggle visibility of file upload form
         document.getElementById('modifyButton').addEventListener('click', function() {
-            var form = document.querySelector('.modificar-form');
+            var form = document.querySelector('.modify-form');
             if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
+                form.style.display = 'block';                
+                // document.querySelector('.modify-container').style.marginTop = '-8vh'; // Adjust the value as needed
+                //document.querySelector('.modify-container').style.height = '12vh'; // Reset to the original value
+                document.querySelector('.edificio-img').style.marginBottom = '-4vh'; // Adjust the value as needed
             } else {
                 form.style.display = 'none';
+                //document.querySelector('.modify-container').style.marginTop = '-8vh'; // Adjust the value as needed
+                // document.querySelector('.modify-container').style.height = '3vh'; // Reset to the original value
+                document.querySelector('.edificio-img').style.marginBottom = '-4vh';
             }
         });
     </script>
