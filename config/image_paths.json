@@ -1,6 +1,7 @@
 {
     "fiec": "/assets/fiec.png",
     "edificio-a": "/assets/edificio-a.png",
+    "edificio-b": "/assets/edificio-b.png",
     "another_tag": "/assets/another_image.png",
     "yet_another_tag": "/assets/yet_another_image.png"
 }
