@@ -1,27 +1,4 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-session_start(); // Start the session
-
-// Define the relative path to the target directory
-$relative_target_dir = "/assets/";
-$absolute_target_dir = "/var/www/html/assets/";
-
-// Define the path to the JSON file that stores the image paths
-$json_file_path = '/var/www/html/config/image_paths.json';
-
-// The tag for this specific page
-$page_tag = 'fiec';
-
-// Include the image upload logic
-include '/var/www/html/php/image-upload.php';
-
-// If no upload, read the current image path from the JSON file
-$image_paths = read_image_paths($json_file_path);
-$relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag] : $relative_target_dir . "fiec.png";
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -66,33 +43,17 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         </div>
         
         <!-- Building Image -->
-        <div class="edificio">
-            <!-- Use the relative path for the img src attribute -->
-            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B">
-        </div>
+        <img class="edificio-img" src="../../../assets/facultad.jpg" alt="FIEC">
         
         <!-- Modify Image Button-->
         <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
-            <!-- Show the modify button -->
             <style> 
                 .edificio-img {
                 margin-bottom: 4vh;
                 }
             </style>
-            <br><button id="modifyButton" class="modify-button">Modificar</button>
-
-            <!-- File upload form (hidden by default) -->
-            <div class="modificar-form">
-                <form action="" method="post" enctype="multipart/form-data">
-                    <input type="file" name="new_image" id="new_image">
-                    <button type="submit">Modificar</button>
-                </form>
-            </div>
-        <?php
-        }
-        ?>
-
-        
+            <br><button class="modify-button">Modificar</button>
+        <?php } ?>
         
         <!-- Content Buttons -->
         <div class="botones">
