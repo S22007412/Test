@@ -127,11 +127,13 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     Salones
                 </button></a>
             </div>
+            <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
             <div class="horarios">
                 <a href="../horarios/horarios/index.html"><button>
                     Horarios
                 </button></a>
             </div>
+            <?php } ?>
     
             <div class="comollegar">
                 <a href="../como-llegar/como-llegar/index.html"><button>
