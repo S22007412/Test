@@ -215,6 +215,36 @@ html {
     border-radius: 1.5vh;
 }
 
+/* Information */
+
+.modify-container:last-of-type {
+    margin-top: -1.5vh;
+}
+
+.info-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vh;
+    padding: 1vh;
+}
+
+.info-title {
+    font-size: 2vh;
+    font-weight: 600;
+    margin: 1vh 0 2vh 0;
+}
+
+.info-content {
+    padding-bottom: 1vh;
+    font-size: 1.7vh;
+}
+
+.modify-textarea {
+    border-radius: 2vh;
+    padding: 2vh;
+    width: 90%;
+    font-size: 1.7vh;
+}
+
 /* Footer */
 
 .navbar-fixed-bottom {
