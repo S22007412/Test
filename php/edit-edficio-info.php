@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $informacion = mysqli_real_escape_string($conn, $_POST['informacion']);
 
     // Prepare the SQL statement to update the information
-    $sql = "UPDATE edificio SET informacion='$informacion' WHERE id_edificio='$id_edificio'";
+    $sql = "UPDATE edificio SET historia='$informacion' WHERE id_edificio='$id_edificio'";
 
     // Execute the query
     if (mysqli_query($conn, $sql)) {
