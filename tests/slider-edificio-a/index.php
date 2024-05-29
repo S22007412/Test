@@ -65,7 +65,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             <button class="button-page">Edificio A</button>
         </div>
         
-        
+        <script src="/scripts/slides.js"></script>
 
         <div class="slider">
             <div class="slides">
@@ -127,9 +127,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 texto:<br>
                                 <?php
                                     $id_edificio = '1';
-                                    $id_salon = '1';
                             
-                                    include '/var/www/html/php/salon-info.php'; 
+                                    include '/var/www/html/php/edificio-info.php'; 
                                 ?>
                             
                             </h3>
@@ -140,7 +139,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                     <form id="editForm" action="/php/edit-salon-info.php" method="POST" style="display: none;">
                                         <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
                                         <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
-                                        <input type="hidden" name="id_salon" value="<?php echo $id_salon; ?>">
                                         <button type="submit">Guardar</button>
                                     </form>
                                 </div>
@@ -152,13 +150,10 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 </script>
 
                             <?php } ?>
-
                         </div>
                     </div>
-                    
-                    
-                    
                 </div>
+
                 <div class="slide" id="slide-2">
                     <div class="slider-container">
                         <div class="slide-header">
@@ -220,34 +215,9 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                 </div>
             </div>
         </div>
-        <script>
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-    
-            function showSlide(slideIndex) {
-                slides.forEach((slide, index) => {
-                    slide.style.display = index === slideIndex ? 'block' : 'none';
-                });
-            }
-    
-            function changeSlide(n) {
-                currentSlide += n;
-                if (currentSlide < 0) currentSlide = totalSlides - 1;
-                if (currentSlide >= totalSlides) currentSlide = 0;
-                showSlide(currentSlide);
-            }
-    
-            document.querySelectorAll('.nav').forEach(button => {
-                button.addEventListener('click', function() {
-                    const direction = this.classList.contains('next') ? 1 : -1;
-                    changeSlide(direction);
-                });
-            });
-    
-            // Initially show the first slide
-            showSlide(currentSlide);
-        </script>
+
+
+
     </div>
 
     <div class="navbar-fixed-bottom">

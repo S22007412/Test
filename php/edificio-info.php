@@ -5,7 +5,6 @@ include 'connection.php'; // Ensure this includes the correct connection details
 
 // Prepare the SQL statement
 $id_edificio = mysqli_real_escape_string($conn, $id_edificio);
-$id_salon = mysqli_real_escape_string($conn, $id_salon);
 $sql = "SELECT historia FROM edificio WHERE id_edificio='$id_edificio'";
 
 // Execute the query
