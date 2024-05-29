@@ -16,7 +16,7 @@ if (!$result) {
 
 // Fetch the result
 $row = mysqli_fetch_assoc($result);
-$informacion = $row['informacion'];
+$informacion = $row['historia'];
 
 // Echo the result
 echo $informacion;
