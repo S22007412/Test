@@ -129,7 +129,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                     $id_edificio = '1';
                                     $id_salon = '1';
                             
-                                    include '/php/salon-info.php'; 
+                                    include '/var/www/html/php/salon-info.php'; 
                                 ?>
                             
                             </h3>
@@ -137,7 +137,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
                                 <div class="modificar">
                                     <button onclick="showEditForm()">Modificar</button>
-                                    <form id="editForm" action="php/edit-salon-info.php" method="POST" style="display: none;">
+                                    <form id="editForm" action="/var/www/html/php/edit-salon-info.php" method="POST" style="display: none;">
                                         <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
                                         <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
                                         <input type="hidden" name="id_salon" value="<?php echo $id_salon; ?>">
