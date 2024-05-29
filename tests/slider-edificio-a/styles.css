@@ -142,6 +142,15 @@ html {
 
 /* Content */
 
+.edificio {
+    max-height: 24vh;
+}
+
+.test {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
 .main {
     padding-top: 12vh;
     padding-bottom: 8vh;
@@ -149,10 +158,11 @@ html {
 }
 
 .edificio-img {
-    margin-bottom: 4vh;
+    height: auo;
     max-height: 24vh;
     max-width: 100%;
     border-radius: 1.5vh;
+    margin-bottom: 0px;
 }
 
 .modify-container {

@@ -85,6 +85,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     </div>
                     <div class="slide-content">
                             <!-- Building Image -->
+                            <div class="test">
                         <div class="edificio">
                             <!-- Use the relative path for the img src attribute -->
                             <!-- <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> -->
@@ -92,14 +93,10 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
                         
                         <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
-                            <style>
-                                .edificio-img {
-                                margin-bottom: -4vh;
-                                }
-                            </style>
+                            
                             <!-- Show the modify button -->
                             <div class="modify-container">
-                            <br><button class="modify-button button-modify" id="modifyButton">Modificar</button>
+                            <button class="modify-button button-modify" id="modifyButton">Modificar</button>
                             
                             <!-- File upload form (hidden by default) -->
                             <div class="modify-form" style="display: none;">
@@ -113,7 +110,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <?php
                         }
                         ?>
-
+                        </div>
                         <div class="info">
                             <div class="info-container">
 
