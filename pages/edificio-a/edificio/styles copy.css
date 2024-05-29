@@ -66,90 +66,7 @@ html {
     border-bottom: solid 0.35vh rgb(255, 255, 255);
 }
 
-/* Slider */
-
-/* Slider Container */
-.slider {
-    width: 40vh;
-    max-width: 80vw;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    
-}
-
-.slider-container {
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    border-radius: 3vh;
-    width: 80%;
-    padding-bottom: 0.8vh;
-    margin-bottom: 1vh;
-}
-
-/* Slide Header */
-.slide-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4vh;
-    margin-bottom: -0.5vh;
-}
-
-.nav {
-    background: none;
-    border: none;
-    color: #373636;
-    cursor: pointer;
-    font-size: 6vh;
-    margin-bottom: -0.4vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.nav-text {
-    color: #373636;
-    font-weight: 500;
-    font-size: 2vh;
-}
-
-/* Slide Content */
-.slide-content {
-    padding: 1vh;
-    text-align: center;
-    flex-grow: 1;
-}
-
-/* Pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-}
-
-.dot {
-    height: 0.7vh;
-    width: 0.7vh;
-    margin: 0 0.5vh;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot.active {
-    background-color: #717171;
-}
-
-
 /* Content */
-
-.edificio {
-    max-height: 24vh;
-}
-
-.test {
-    box-sizing: border-box;
-    display: inline-block;
-}
 
 .main {
     padding-top: 12vh;
@@ -158,15 +75,14 @@ html {
 }
 
 .edificio-img {
-    height: auo;
+    margin-bottom: 4vh;
     max-height: 24vh;
-    max-width: 100%;
+    max-width: 80vw;
     border-radius: 1.5vh;
-    margin-bottom: 0px;
 }
 
 .modify-container {
-    margin-bottom: 0vh;
+    margin-bottom: 3vh;
 }
 
 .modify-button {
@@ -177,17 +93,14 @@ html {
     font-size: 2vh;
     font-weight: 600;
     margin-bottom: 1vh;
-    cursor: pointer;
 }
 
 .modify-input {
     width: 20vh;
     padding: 0.6vh;
-    font-size: 1.7vh;
     background: #fff;
     border-radius: 1.5vh;
     font-weight: 400;
-    cursor: pointer;
 }
 
 .accept-button {
@@ -199,10 +112,9 @@ html {
     font-weight: 600;
     margin-top: 1vh;
     margin-bottom: 1vh;
-    cursor: pointer;
 }
 
-.button-page {
+button {
     background-color: rgb(255, 255, 255);
     border: none;
     color: rgb(0, 0, 0);
@@ -215,46 +127,6 @@ html {
     margin: 0 auto 4vh;
     font-size: 3vh;
     font-weight: 600;
-}
-
-.button-page:first-of-type {
-    margin-bottom: 2vh;
-}
-
-.button-modify {
-    border: none;
-    border-radius: 1.5vh;
-}
-
-/* Information */
-
-.modify-container:last-of-type {
-    margin-top: -1.5vh;
-}
-
-.info-container {
-    margin-top: 3vh;
-    background-color: rgb(255, 255, 255);
-    border-radius: 2vh;
-    padding: 1vh;
-}
-
-.info-title {
-    font-size: 2vh;
-    font-weight: 600;
-    margin: 1vh 0 2vh 0;
-}
-
-.info-content {
-    padding-bottom: 1vh;
-    font-size: 1.7vh;
-}
-
-.modify-textarea {
-    border-radius: 2vh;
-    padding: 2vh;
-    width: 90%;
-    font-size: 1.7vh;
 }
 
 /* Footer */
