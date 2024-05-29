@@ -65,7 +65,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             <button class="button-page">Edificio A</button>
         </div>
         
-        <script src="/scripts/slides.js"></script>
+ 
 
         <div class="slider">
             <div class="slides">
@@ -113,9 +113,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <?php
                         }
                         ?>
-                    
-                        
-
 
                         <div class="info">
                             <h1>
@@ -217,6 +214,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         </div>
 
         <script src="/scripts/upload-form-visibility.js"></script>
+
+        <script src="/scripts/slider.js"></script>
 
     </div>
 
