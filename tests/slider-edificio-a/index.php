@@ -114,7 +114,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         }
                         ?>
                     
-                        <script src="/scripts/upload-form-visibility.js"></script>
+                        
 
 
                         <div class="info">
@@ -216,7 +216,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             </div>
         </div>
 
-
+        <script src="/scripts/upload-form-visibility.js"></script>
 
     </div>
 
