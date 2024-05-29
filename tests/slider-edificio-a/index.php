@@ -129,38 +129,34 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </div>
                         
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
-    <div class="modify-container">
-        <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
-        <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
-            <textarea class="modify-textarea" name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
-            <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
-            <button class="accept-button button-modify" type="submit">Guardar</button>
-        </form>
-    </div>
+                                <div class="modify-container">
+                                    <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
+                                    <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
+                                        <textarea class="modify-textarea" name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
+                                        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+                                        <button class="accept-button button-modify" type="submit">Guardar</button>
+                                    </form>
+                                </div>
+                                                        
+                                <style>
+                                    .hidden { display: none; }
+                                    .visible { display: block; }
+                                </style>
+                            
+                                <script>
+                                function toggleEditForm() {
+                                    var form = document.getElementById('editForm');
+                                    if (form.classList.contains('hidden')) {
+                                        form.classList.remove('hidden');
+                                        form.classList.add('visible');
+                                    } else {
+                                        form.classList.remove('visible');
+                                        form.classList.add('hidden');
+                                    }
+                                }
+                                </script>
 
-    <style>
-    .hidden {
-        display: none;
-    }
-    .visible {
-        display: block;
-    }
-    </style>
-
-    <script>
-    function toggleEditForm() {
-        var form = document.getElementById('editForm');
-        if (form.classList.contains('hidden')) {
-            form.classList.remove('hidden');
-            form.classList.add('visible');
-        } else {
-            form.classList.remove('visible');
-            form.classList.add('hidden');
-        }
-    }
-    </script>
-
-<?php } ?>
+                            <?php } ?>
 
                         </div>
                     </div>
