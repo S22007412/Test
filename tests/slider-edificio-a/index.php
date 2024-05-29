@@ -83,57 +83,78 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <span class="dot"></span>
                         </div>
                     </div>
-                        <div class="slide-content">
+                    <div class="slide-content">
                             <!-- Building Image -->
-        <div class="edificio">
-            <!-- Use the relative path for the img src attribute -->
-            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
-            <!--<img class="edificio-img" src="../../../assets/edificio-a.png" alt="Edificio A"> -->
-        </div>
-        
-        <?php
-        if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') {
-        ?>
-            <style>
-                .edificio-img {
-                margin-bottom: -4vh;
-                }
-            </style>
-            <!-- Show the modify button -->
-            <div class="modify-container">
-            <br><button class="modify-button button-modify" id="modifyButton">Modificar</button>
-
-            <!-- File upload form (hidden by default) -->
-            <div class="modify-form" style="display: none;">
-                <form action="" method="post" enctype="multipart/form-data">
-                    <input class="modify-input" type="file" name="new_image" id="new_image">
-                    <br> 
-                    <button class="accept-button button-modify" type="submit">Aceptar</button>
-                </form>
-            </div>
-            </div>
-        <?php
-        }
-        ?>
-
-<script>
-        // JavaScript to toggle visibility of file upload form
-        document.getElementById('modifyButton').addEventListener('click', function() {
-            var form = document.querySelector('.modify-form');
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';                
-                // document.querySelector('.modify-container').style.marginTop = '-8vh'; // Adjust the value as needed
-                //document.querySelector('.modify-container').style.height = '12vh'; // Reset to the original value
-                document.querySelector('.edificio-img').style.marginBottom = '-4vh'; // Adjust the value as needed
-            } else {
-                form.style.display = 'none';
-                //document.querySelector('.modify-container').style.marginTop = '-8vh'; // Adjust the value as needed
-                // document.querySelector('.modify-container').style.height = '3vh'; // Reset to the original value
-                document.querySelector('.edificio-img').style.marginBottom = '-4vh';
-            }
-        });
-    </script>
+                        <div class="edificio">
+                            <!-- Use the relative path for the img src attribute -->
+                            <!-- <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> -->
+                            <img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A">
                         </div>
+                        
+                        <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+                            <style>
+                                .edificio-img {
+                                margin-bottom: -4vh;
+                                }
+                            </style>
+                            <!-- Show the modify button -->
+                            <div class="modify-container">
+                            <br><button class="modify-button button-modify" id="modifyButton">Modificar</button>
+                            
+                            <!-- File upload form (hidden by default) -->
+                            <div class="modify-form" style="display: none;">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <input class="modify-input" type="file" name="new_image" id="new_image">
+                                    <br> 
+                                    <button class="accept-button button-modify" type="submit">Aceptar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    
+                        <script src="/scripts/upload-form-visibility.js"></script>
+
+
+                        <div class="info">
+                            <h1>
+                                Información
+                                <br>
+                                <?php echo($_SESSION['session_type']); ?>
+                            </h1>
+                            <h3>
+                                texto:<br>
+                                <?php
+                                    $id_edificio = '1';
+                                    $id_salon = '1';
+                            
+                                    include '../../../../php/salon-info.php'; 
+                                ?>
+                            
+                            </h3>
+                        
+                            <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+                                <div class="modificar">
+                                    <button onclick="showEditForm()">Modificar</button>
+                                    <form id="editForm" action="../../../../php/edit-salon-info.php" method="POST" style="display: none;">
+                                        <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
+                                        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+                                        <input type="hidden" name="id_salon" value="<?php echo $id_salon; ?>">
+                                        <button type="submit">Guardar</button>
+                                    </form>
+                                </div>
+
+                                <script>
+                                function showEditForm() {
+                                    document.getElementById('editForm').style.display = 'block';
+                                }
+                                </script>
+
+                            <?php } ?>
+
+                        </div>
+                    </div>
                     
                     
                     

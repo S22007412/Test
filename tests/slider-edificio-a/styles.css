@@ -206,6 +206,10 @@ html {
     font-weight: 600;
 }
 
+.button-page:first-of-type {
+    margin-bottom: 2vh;
+}
+
 .button-modify {
     border: none;
     border-radius: 1.5vh;
