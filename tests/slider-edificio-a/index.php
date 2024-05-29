@@ -121,7 +121,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nec dui id tempus. Mauris ornare ipsum faucibus pulvinar maximus. Sed ligula mi, dignissim non sem a, volutpat pharetra nibh. Nunc lacus sapien, sagittis in magna id, faucibus fermentum lectus. Fusce ac est euismod, posuere lorem vitae, consequat massa.
                                     <?php 
                                         $id_edificio = '1';
-                                        nclude '/var/www/html/php/edificio-info.php'; 
+                                        include '/var/www/html/php/edificio-info.php'; 
                                     ?>
                                 </div>
                                 
