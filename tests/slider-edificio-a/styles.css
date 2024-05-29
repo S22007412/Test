@@ -183,6 +183,7 @@ html {
 .modify-input {
     width: 20vh;
     padding: 0.6vh;
+    font-size: 1.7vh;
     background: #fff;
     border-radius: 1.5vh;
     font-weight: 400;

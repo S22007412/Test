@@ -139,9 +139,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 </div>
 
                                 <script>
-                                function showEditForm() {
-                                    document.getElementById('editForm').style.display = 'block';
-                                }
+                                    function toggleEditForm() {
+                                        var form = document.getElementById('editForm');
+                                        if (form.style.display === 'none') {
+                                            form.style.display = 'block';
+                                        } else {
+                                            form.style.display = 'none';
+                                        }
+                                    }
                                 </script>
 
                             <?php } ?>
