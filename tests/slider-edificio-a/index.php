@@ -34,7 +34,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Define font-family for elements that should use Poppins */
-        body, h1, button, input {
+        body, h1, button, input, textarea{
             font-family: 'Poppins', sans-serif;
         }
     </style>
@@ -131,12 +131,12 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </h3>
                         
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
-                                <div class="modificar">
-                                    <button onclick="showEditForm()">Modificar</button>
+                                <div class="modify-container">
+                                    <button class="modify-button button-modify" onclick="showEditForm()">Modificar</button>
                                     <form id="editForm" action="/php/edit-edificio-info.php" method="POST" style="display: none;">
                                         <textarea name="informacion" rows="4" cols="50"><?php echo $informacion; ?></textarea>
                                         <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
-                                        <button type="submit">Guardar</button>
+                                        <button class="accept-button button-modify" type="submit">Guardar</button>
                                     </form>
                                 </div>
 
