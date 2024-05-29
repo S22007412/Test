@@ -166,7 +166,7 @@ html {
 }
 
 .modify-container {
-    margin-bottom: 3vh;
+    margin-bottom: 0vh;
 }
 
 .modify-button {
@@ -233,6 +233,7 @@ html {
 }
 
 .info-container {
+    margin-top: 3vh;
     background-color: rgb(255, 255, 255);
     border-radius: 2vh;
     padding: 1vh;
