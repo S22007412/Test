@@ -25,7 +25,7 @@ if ($stmt) {
 
     if ($result->num_rows > 0) {
         // Admin found, set session type to 'admin'
-        include 'set-session-admin.php';        
+        include '/php/set-session-admin.php';        
         exit();
     } else {
         // No admin found, check regular users
@@ -39,12 +39,12 @@ if ($stmt) {
 
             if ($result2->num_rows > 0) {
                 // Regular user found, set session type to 'student'
-                include 'set-session-student.php';
+                include '/php/set-session-student.php';
                 exit();
             } else {
                 // Neither admin nor regular user found
                 $_SESSION['retry'] = 'true';
-                header('Location: ../pages/login/index.php');
+                header('Location: /login/');
                 exit();
 
             }
