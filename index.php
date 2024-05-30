@@ -31,7 +31,7 @@ $_SESSION['retry'] = 'false';
         </div>
         <div class="centerbutton">
             <div class="button">
-                <a href="pages/login/index.php">
+                <a href="pages/login/">
                     <button class="button button1"><p>Comenzar</p></button>
                 </a>
             </div>
