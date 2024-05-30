@@ -22,8 +22,8 @@
 <body>
 
     <div class="title">
-        <a href="../../index.php">
-        <img class="back" src="../../../assets/icon-arrow-left.png"></a>
+        <a href="/index.php">
+        <img class="back" src="/assets/icon-arrow-left.png"></a>
         <h1>Iniciar Sesión</h1>
         <div class="divisor"></div>
     </div>
@@ -31,17 +31,17 @@
     <div class="main">
         <div class="logo-container">
             <div class="logo-wrapper">
-                <img class="logouv" src="../../../assets/logo-uv.png" alt="Logo UV">
+                <img class="logouv" src="/assets/logo-uv.png" alt="Logo UV">
                 <h1>UBIUV</h1>
             </div>
             
-            <form action="../../../php/login.php" method="POST">
+            <form action="/php/login.php" method="POST">
                 <div class="input-container">
-                    <img class="icon" src="../../../assets/icon-user.png">
+                    <img class="icon" src="/assets/icon-user.png">
                     <input type="text" id="username" name="username" placeholder="Correo Institucional">
                 </div>
                 <div class="input-container">
-                    <img class="icon" src="../../../assets/icon-lock.jpg">
+                    <img class="icon" src="/assets/icon-lock.jpg">
                     <input type="password" id="password" name="password" placeholder="Contraseña">
                 </div>
                 <button id="loginButton" class="button"><p>Iniciar Sesión</p></button>
