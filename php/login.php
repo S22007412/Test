@@ -25,7 +25,7 @@ if ($stmt) {
 
     if ($result->num_rows > 0) {
         // Admin found, set session type to 'admin'
-        include '/php/set-session-admin.php';        
+        include 'set-session-admin.php';        
         exit();
     } else {
         // No admin found, check regular users
@@ -39,7 +39,7 @@ if ($stmt) {
 
             if ($result2->num_rows > 0) {
                 // Regular user found, set session type to 'student'
-                include '/php/set-session-student.php';
+                include 'set-session-student.php';
                 exit();
             } else {
                 // Neither admin nor regular user found
