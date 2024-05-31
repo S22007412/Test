@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div class="main">
-            <button><a href="../interactive-map/index.html">entrar</a></button>
-            <br><br>
-            <button><a href="../../../tests/old-tests/testmodbdd.php">test modificar bdd</a></button>
-            <br><br>
-            <button><a href="../../../tests/old-tests/image/test2.php">test modificar img</a></button>
-            <br><br>
-            if this has changed, cron is working 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>map</title>
+    <!-- Add Poppins font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Define font-family for elements that should use Poppins */
+        body, h1, button {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed-top">      
+        <div class="logo-container">
+            <div class="part1">
+                <img class="logouv" src="/assets/logo-uv.png" alt="Logo UV">
+            </div>
+            <div class="part2">
+                <h1>UBIUV</h1>  
+            </div>
         </div>
-    </body>
+        <div class="header-separator"></div>
+    </div>
+
+    <div class="main">
+        
+        <div>
+            <img class="facu-img" src="/assets/img-facu.png">
+        </div>
+        
+        <div class="text">
+            UBIUV: Navega tu Campus" es una aplicación móvil innovadora diseñada para facilitar la exploración y la interacción en el entorno universitario. Con UBIUV, los estudiantes pueden navegar fácilmente por el campus, descubrir recursos clave y participar en experiencias educativas enriquecedoras, todo desde la palma de su mano. ¡Explora, aprende y conecta con UBIUV!
+        </div>
+
+    <div class="navbar-fixed-bottom">
+        <div class="footer-separator"></div>
+        <div class="icon-container">
+            <a href="/pages/main/intro/index.html">
+                <img class="icon" class="home-icon" src="/assets/icon-home.png">
+            </a>
+            <a href="/pages/main/interactive-map/index.html">
+                <img class="icon" src="/assets/icon-main.png">
+            </a>
+            <a href="">
+                <img class="icon" src="/assets/icon-menu.png">
+            </a>
+        </div>
+    </div>
+</body>
 </html>
