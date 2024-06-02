@@ -197,7 +197,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <?php 
                                 $id_salon = '1';
                                 $id_edificio = '1';
-                                include '/var/www/html/php/edificio-info.php'; 
+                                include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom2')">A-15</button>
