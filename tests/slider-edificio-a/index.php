@@ -28,7 +28,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no">
-    <title>Edificio A<A></A></title>
+    <title>Edificio A</title>
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles.css">
