@@ -4,6 +4,8 @@ html {
 
 /* Header */
 
+
+
 .navbar-fixed-top {
     position: fixed;
     right: 0;
@@ -88,7 +90,8 @@ html {
     justify-content: center;
 }
 
-.map {
+.map-frame {
+    border-radius: 1.5vh;
     margin: 0 auto;
     height: 34vh;
     width: 40vh;
