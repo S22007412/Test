@@ -22,7 +22,7 @@
 <body>
 
     <div class="title">
-        <a href="/index.php">
+        <a href="/">
         <img class="back" src="/assets/icon-arrow-left.png"></a>
         <h1>Iniciar Sesión</h1>
         <div class="divisor"></div>
