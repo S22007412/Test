@@ -130,49 +130,46 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
                                 <div class="modify-container">
-    <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
-    <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
-        <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden; resize:none;"><?php echo $informacion; ?></textarea>
-        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
-        <button class="accept-button button-modify" type="submit">Guardar</button>
-    </form>
-</div>
+                                <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
+                                <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
+                                    <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden; resize:none;"><?php echo $informacion; ?></textarea>
+                                    <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+                                    <button class="accept-button button-modify" type="submit">Guardar</button>
+                                </form>
+                            </div>
 
-<style>
-    .hidden { display: none; }
-    .visible { display: block; }
-</style>
+                            <style>
+                                .hidden { display: none; }
+                                .visible { display: block; }
+                            </style>
 
-<script>
-function textAreaAdjust(element) {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    element.style.height = "auto";
-    element.style.height = (element.scrollHeight) + "px";
-    window.scrollTo(0, scrollTop);
-}
+                            <script>
+                            function textAreaAdjust(element) {
+                                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                element.style.height = "auto";
+                                element.style.height = (element.scrollHeight) + "px";
+                                window.scrollTo(0, scrollTop);
+                            }
 
-function toggleEditForm() {
-    var form = document.getElementById('editForm');
-    if (form.classList.contains('hidden')) {
-        form.classList.remove('hidden');
-        form.classList.add('visible');
-        textAreaAdjust(document.getElementById('informacion')); // Adjust textarea height when form is shown
-    } else {
-        form.classList.remove('visible');
-        form.classList.add('hidden');
-    }
-}
+                            function toggleEditForm() {
+                                var form = document.getElementById('editForm');
+                                if (form.classList.contains('hidden')) {
+                                    form.classList.remove('hidden');
+                                    form.classList.add('visible');
+                                    textAreaAdjust(document.getElementById('informacion')); // Adjust textarea height when form is shown
+                                } else {
+                                    form.classList.remove('visible');
+                                    form.classList.add('hidden');
+                                }
+                            }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var textarea = document.getElementById('informacion');
-    textarea.addEventListener('input', function() {
-        textAreaAdjust(this);
-    });
-});
-</script>
-
-
-
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var textarea = document.getElementById('informacion');
+                                textarea.addEventListener('input', function() {
+                                    textAreaAdjust(this);
+                                });
+                            });
+                            </script>
 
                             <?php } ?>
 
@@ -195,8 +192,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                     <div class="slide-content">
-                        <p>Curabitur gravida risus vitae maximus viverra. Proin pretium eu massa id venenatis. Ut eget enim porttitor, imperdiet arcu quis, condimentum ex. Quisque id magna sed orci scelerisque malesuada nec ut turpis.</p>
+                        <button class="button-classroom" onclick="toggleBox('clasroom1')">A-14</button>
+                        <div class="info-classroom" id="clasroom1" style="display: none;">
+                            <?php 
+                                $id_salon = '1';
+                                $id_edificio = '1';
+                                include '/var/www/html/php/edificio-info.php'; 
+                            ?>
+                        </div>
+                        <button class="button-classroom" onclick="toggleBox('clasroom2')">A-15</button>
+                        <div class="info-classroom" id="clasroom2" style="display: none;">Text for A-2</div>
+                        <button class="button-classroom" onclick="toggleBox('clasroom3')">A-16</button>
+                        <div class="info-classroom" id="clasroom3" style="display: none;">Text for A-3</div>
+                        <button class="button-classroom" onclick="toggleBox('clasroom4')">Aula Magna</button>
+                        <div class="info-classroom" id="clasroom4" style="display: none;">Text for A-4</div>
+                        <button class="button-classroom" onclick="toggleBox('clasroom4')">Salón de Actos</button>
+                        <div class="info-classroom" id="clasroom4" style="display: none;">Text for A-4</div>
                     </div>
+                    
+                    <script>
+                        function toggleBox(id) {
+                            var textElement = document.getElementById(id);
+                            if (textElement.style.display === "none") {
+                                textElement.style.display = "block";
+                            } else {
+                                textElement.style.display = "none";
+                            }
+                        }
+                    </script>
+                    
                     
                 </div>
 

@@ -142,6 +142,8 @@ html {
 
 /* Content */
 
+/* Historia */
+
 .edificio {
     max-height: 24vh;
 }
@@ -255,6 +257,31 @@ html {
     padding: 2vh;
     width: 90%;
     font-size: 1.7vh;
+}
+
+/* Salones */
+
+.button-classroom {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 36vh;
+    max-width: 80vw;
+    vertical-align: middle;
+    margin: 4vh auto 0;
+    font-size: 2vh;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.info-classroom {
+    background-color: #b3b3b3;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 0 0 1vh 1vh;
 }
 
 /* Footer */
