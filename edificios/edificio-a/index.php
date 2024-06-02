@@ -132,7 +132,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <div class="modify-container">
     <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
     <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
-        <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden"><?php echo $informacion; ?></textarea>
+        <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden; resize:none;"><?php echo $informacion; ?></textarea>
         <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
         <button class="accept-button button-modify" type="submit">Guardar</button>
     </form>
@@ -141,13 +141,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <style>
     .hidden { display: none; }
     .visible { display: block; }
-    .modify-textarea { resize: none; }
 </style>
 
 <script>
 function textAreaAdjust(element) {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     element.style.height = "auto";
     element.style.height = (element.scrollHeight) + "px";
+    window.scrollTo(0, scrollTop);
 }
 
 function toggleEditForm() {
@@ -169,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 
 
 
