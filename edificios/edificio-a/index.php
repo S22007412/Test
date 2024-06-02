@@ -84,16 +84,17 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <span class="dot"></span>
                         </div>
                     </div>
+
                     <div class="slide-content">
                             <!-- Building Image -->
-                            <div class="test">
-                        <div class="edificio">
-                            <!-- Use the relative path for the img src attribute -->
-                            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
-                            <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
-                        </div>
-                        
-                        <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+                        <div class="test">
+                            <div class="edificio">
+                                <!-- Use the relative path for the img src attribute -->
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
+                                <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
+                            </div>
+
+                            <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
                             
                             <!-- Show the modify button -->
                             <div class="modify-container">
@@ -103,21 +104,20 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <div class="modify-form" style="display: none;">
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <input class="modify-input" type="file" name="new_image" id="new_image">
-                                    <br> 
-                                    <button class="accept-button button-modify" type="submit">Aceptar</button>
+                                    <br><button class="accept-button button-modify" type="submit">Aceptar</button>
                                 </form>
                             </div>
+
+                        
+                        <?php } ?>
                         </div>
-                        <?php
-                        }
-                        ?>
-                        </div>
+                    </div>
+
                         <div class="info">
                             <div class="info-container">
 
                                 <div class="info-title">Historia</div>
                                                            
-                                
                                 <div class="info-content">
                                     <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nec dui id tempus. Mauris ornare ipsum faucibus pulvinar maximus. Sed ligula mi, dignissim non sem a, volutpat pharetra nibh. Nunc lacus sapien, sagittis in magna id, faucibus fermentum lectus. Fusce ac est euismod, posuere lorem vitae, consequat massa. -->
                                     <?php 
@@ -125,8 +125,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                         include '/var/www/html/php/edificio-info.php'; 
                                     ?>
                                 </div>
-                                
-                            
+
                             </div>
                         
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
