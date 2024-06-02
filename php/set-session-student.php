@@ -1,6 +1,6 @@
 <?php
 session_start();
 $_SESSION['session_type'] = 'student';
-header('Location: ../pages/main/intro/index.html');
+header('Location: /pages/main/intro/');
 exit();
 ?>
