@@ -47,6 +47,9 @@
                 <button id="loginButton" class="button"><p>Iniciar Sesión</p></button>
             </form>
             
+            <div class="button-spacing"></div>
+            <button class="button"><p>Modo Invitado</p></button>
+
             <?php
             
             if(isset($_SESSION['retry']) && ($_SESSION['retry'] == 'true')) {
