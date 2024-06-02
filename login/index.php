@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UBIUV Inicio de sesión</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="styles.css" />
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
