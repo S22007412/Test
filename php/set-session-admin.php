@@ -1,6 +1,6 @@
 <?php
 session_start();
 $_SESSION['session_type'] = 'admin';
-header('Location: /pages/home/');
+header('Location: /home/');
 exit();
 ?>
