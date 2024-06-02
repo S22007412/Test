@@ -201,13 +201,37 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             ?>
                         </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom2')">A-15</button>
-                        <div class="info-classroom" id="clasroom2" style="display: none;">Text for A-2</div>
+                        <div class="info-classroom" id="clasroom2" style="display: none;">
+                            <?php 
+                                $id_salon = '2';
+                                $id_edificio = '1';
+                                include '/var/www/html/php/salon-info.php'; 
+                            ?>
+                        </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom3')">A-16</button>
-                        <div class="info-classroom" id="clasroom3" style="display: none;">Text for A-3</div>
+                        <div class="info-classroom" id="clasroom3" style="display: none;">
+                        <?php 
+                                $id_salon = '3';
+                                $id_edificio = '1';
+                                include '/var/www/html/php/salon-info.php'; 
+                            ?>
+                        </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom4')">Aula Magna</button>
-                        <div class="info-classroom" id="clasroom4" style="display: none;">Text for A-4</div>
+                        <div class="info-classroom" id="clasroom4" style="display: none;">
+                        <?php 
+                                $id_salon = '5';
+                                $id_edificio = '1';
+                                include '/var/www/html/php/salon-info.php'; 
+                            ?>
+                        </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom4')">Salón de Actos</button>
-                        <div class="info-classroom" id="clasroom4" style="display: none;">Text for A-4</div>
+                        <div class="info-classroom" id="clasroom4" style="display: none;">
+                        <?php 
+                                $id_salon = '6';
+                                $id_edificio = '1';
+                                include '/var/www/html/php/salon-info.php'; 
+                            ?>
+                        </div>
                     </div>
                     
                     <script>
