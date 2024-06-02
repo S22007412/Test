@@ -132,7 +132,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <div class="modify-container">
     <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
     <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
-        <textarea class="modify-textarea" name="informacion" onkeyup="textAreaAdjust(this)" style="overflow:hidden"><?php echo $informacion; ?></textarea>
+        <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden"><?php echo $informacion; ?></textarea>
         <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
         <button class="accept-button button-modify" type="submit">Guardar</button>
     </form>
@@ -141,6 +141,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <style>
     .hidden { display: none; }
     .visible { display: block; }
+    .modify-textarea { resize: none; }
 </style>
 
 <script>
@@ -154,12 +155,21 @@ function toggleEditForm() {
     if (form.classList.contains('hidden')) {
         form.classList.remove('hidden');
         form.classList.add('visible');
+        textAreaAdjust(document.getElementById('informacion')); // Adjust textarea height when form is shown
     } else {
         form.classList.remove('visible');
         form.classList.add('hidden');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var textarea = document.getElementById('informacion');
+    textarea.addEventListener('input', function() {
+        textAreaAdjust(this);
+    });
+});
 </script>
+
 
 
                             <?php } ?>
