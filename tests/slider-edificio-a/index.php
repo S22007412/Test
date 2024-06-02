@@ -233,14 +233,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
     <div class="navbar-fixed-bottom">
         <div class="footer-separator"></div>
         <div class="icon-container">
-            <a href="/pages/main/intro/index.html">
-                <img class="icon" class="home-icon" src="../../assets/icon-home.png">
+            <a href="/home/">
+                <img class="icon" class="home-icon" src="/assets/icon-home.png">
             </a>
-            <a href="/pages/main/interactive-map/index.html">
-                <img class="icon" src="../../assets/icon-main.png">
+            <a href="/map/">
+                <img class="icon" src="/assets/icon-main.png">
             </a>
             <a href="">
-                <img class="icon" src="../../assets/icon-menu.png">
+                <img class="icon" src="/assets/icon-menu.png">
             </a>
         </div>
     </div>
