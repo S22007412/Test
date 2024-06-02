@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBIUV Iniciar Sesión</title>
+    <title>UBIUV Inicio de sesión</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
@@ -48,7 +48,7 @@
             </form>
             
             <div class="button-spacing"></div>
-            
+
             <form action="/php/set-session-guest.php" method="post">
                 <button class="button"><p>Modo Invitado</p></button>
             </a>

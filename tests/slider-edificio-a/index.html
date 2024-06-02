@@ -88,8 +88,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <div class="test">
                         <div class="edificio">
                             <!-- Use the relative path for the img src attribute -->
-                            <!-- <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> -->
-                            <img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A">
+                            <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
+                            <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
                         </div>
                         
                         <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
