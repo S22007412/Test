@@ -48,8 +48,11 @@
             </form>
             
             <div class="button-spacing"></div>
-            <button class="button"><p>Modo Invitado</p></button>
-
+            
+            <form action="/php/set-session-guest.php" method="post">
+                <button class="button"><p>Modo Invitado</p></button>
+            </a>
+            
             <?php
             
             if(isset($_SESSION['retry']) && ($_SESSION['retry'] == 'true')) {
