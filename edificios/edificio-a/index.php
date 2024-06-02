@@ -145,8 +145,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 
 <script>
 function textAreaAdjust(element) {
-    element.style.height = "1vh";
-    element.style.height = (25 + element.scrollHeight) + "vh";
+    element.style.height = "auto";
+    element.style.height = (element.scrollHeight) + "px";
 }
 
 function toggleEditForm() {
@@ -160,6 +160,7 @@ function toggleEditForm() {
     }
 }
 </script>
+
 
                             <?php } ?>
 
