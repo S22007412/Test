@@ -278,7 +278,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                 </div>
                     
 
-                <div class="slide" id="slide-4">
+                <div class="slide" id="slide-3">
                     <div class="slider-container">
                         <div class="slide-header">
                             <button class="nav prev">‹</button>
