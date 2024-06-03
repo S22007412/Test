@@ -293,7 +293,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 
                         <?php
                                 // Read the JSON file
-                            $jsonString = file_get_contents('/var/www/html/config/schedules-download.json');
+                            $jsonString = file_get_contents(__DIR__ . '/var/www/html/config/schedules-download.json');
                             $schedules = json_decode($jsonString, true);
                         ?>
 
