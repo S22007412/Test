@@ -292,22 +292,40 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <!-- Horarios-->
 
                         <?php
-// Determine the absolute path to the schedules.json file
-$jsonFilePath = '/var/www/html/config/schedules_download.json';
+                            // Determine the absolute path to the schedules.json file
+                            $schedulesDownloadJsonFilePath = '/var/www/html/config/schedules_download.json';
+                                                        
+                            // Read the JSON file
+                            $schedulesDownloadJsonString = @file_get_contents($schedulesDownloadJsonFilePath);
+                                                        
+                            if ($schedulesDownloadJsonString === false) {
+                                die('Error: Unable to read the JSON file at ' . $jsonFilePath);
+                            }
+                            
+                            $schedulesDownload = json_decode($schedulesDownloadJsonString, true);
+                            
+                            if (json_last_error() !== JSON_ERROR_NONE) {
+                                die('Error: Invalid JSON data.');
+                            }
+                        ?>
 
-// Read the JSON file
-$jsonString = @file_get_contents($jsonFilePath);
-
-if ($jsonString === false) {
-    die('Error: Unable to read the JSON file at ' . $jsonFilePath);
-}
-
-$schedules = json_decode($jsonString, true);
-
-if (json_last_error() !== JSON_ERROR_NONE) {
-    die('Error: Invalid JSON data.');
-}
-?>
+                        <?php
+                            // Determine the absolute path to the schedules.json file
+                            $schedulesViewJsonFilePath = '/var/www/html/config/schedules_view.json';
+                                                        
+                            // Read the JSON file
+                            $schedulesViewJsonString = @file_get_contents($schedulesViewJsonFilePath);
+                                                        
+                            if ($schedulesViewJsonString === false) {
+                                die('Error: Unable to read the JSON file at ' . $jsonFilePath);
+                            }
+                            
+                            $schedulesView = json_decode($schedulesViewJsonString, true);
+                            
+                            if (json_last_error() !== JSON_ERROR_NONE) {
+                                die('Error: Invalid JSON data.');
+                            }
+                        ?>
 
 
 <!--
@@ -325,7 +343,10 @@ if (json_last_error() !== JSON_ERROR_NONE) {
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
-                            <a href="<?php echo htmlspecialchars($schedules['a-15-matutino']); ?>">
+                            <a href="<?php echo htmlspecialchars($schedulesView['a-15-matutino']); ?>">
+                <button class="button-schedule-download">Ver</button>
+            </a>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>">
                 <button class="button-schedule-download">Descargar</button>
             </a>
                             
@@ -334,7 +355,10 @@ if (json_last_error() !== JSON_ERROR_NONE) {
                         <button class="button-schedule" onclick="toggleBox('schedule3')">A-16</button>
                         <div class="info-schedule" id="schedule3" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
-                            <a href="<?php echo htmlspecialchars($schedules['a-16-matutino']); ?>">
+                            <a href="<?php echo htmlspecialchars($schedulesView['a-16-matutino']); ?>">
+                <button class="button-schedule-download">Ver</button>
+            </a>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>">
                 <button class="button-schedule-download">Descargar</button>
             </a>
                         </div>
