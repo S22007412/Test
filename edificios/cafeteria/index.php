@@ -87,7 +87,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="test">
                             <div class="edificio">
                                 <!-- Use the relative path for the img src attribute -->
-                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio G"> 
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Cafetería"> 
                                 <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
                             </div>
 
@@ -118,7 +118,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <div class="info-content">
                                     <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nec dui id tempus. Mauris ornare ipsum faucibus pulvinar maximus. Sed ligula mi, dignissim non sem a, volutpat pharetra nibh. Nunc lacus sapien, sagittis in magna id, faucibus fermentum lectus. Fusce ac est euismod, posuere lorem vitae, consequat massa. -->
                                     <?php 
-                                        $id_edificio = '3';
+                                        $id_edificio = '5';
                                         include '/var/www/html/php/edificio-info.php'; 
                                     ?>
                                 </div>
@@ -191,7 +191,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="test">
                             <div class="edificio">
                                 <!-- Use the relative path for the img src attribute -->
-                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio G"> 
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Cafetería"> 
                                 <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
                             </div>
 
