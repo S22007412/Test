@@ -364,11 +364,12 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <a href="<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>">
                 <button class="button-schedule-download">Descargar</button>
             </a>
+            
                         </div>
-                        
+                        <div class="schedule-end-spacing"></div>
                         
                     </div>
-                    <div class="schedule-end-spacing"></div>
+                    
                 
 
                 <div class="slide" id="slide-4">
