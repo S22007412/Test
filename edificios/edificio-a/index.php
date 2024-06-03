@@ -44,7 +44,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <body>
     <div class="navbar-fixed-top">
         <div class="back-arrow">
-            <a href="/interactive-map/">
+            <a href="/map/">
                 <img class="arrow-img" src="/assets/icon-arrow-left.png">
             </a>
         </div>        
