@@ -280,7 +280,7 @@ html {
 
 .info-classroom {
     background-color: #ffffff;
-    margin: -2.6vh auto 1.5vh;
+    margin: -2.6vh auto 1vh;
     width: 27vh;
     max-width: 60vw;
     border-radius: 0 0 2vh 2vh;
@@ -290,7 +290,7 @@ html {
 }
 
 .info-classroom-last {
-    margin-bottom: 3vh;
+    margin-bottom: 3.5vh;
 }
 
 
