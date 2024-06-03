@@ -293,7 +293,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 
                         <?php
 // Determine the absolute path to the schedules.json file
-$jsonFilePath = '/var/www/html/config/schedules-download.json';
+$jsonFilePath = '/var/www/html/config/schedules_download.json';
 
 // Read the JSON file
 $jsonString = @file_get_contents($jsonFilePath);
