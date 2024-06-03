@@ -443,7 +443,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 src="<?php echo htmlspecialchars($routeLinks['salon-actos']); ?>">
                             </iframe> 
                         </div>
-                    </div>
+                    
                     <div class="classroom-end-spacing"></div>
 
                     </div>
