@@ -361,7 +361,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         
                     </div>
                     
-                </div>
 
                 <div class="slide" id="slide-4">
                     <div class="slider-container">
