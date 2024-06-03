@@ -155,7 +155,7 @@ html {
 
 .main {
     padding-top: 12vh;
-    padding-bottom: 8vh;
+    padding-bottom: 10vh;
     text-align: center;
 }
 
@@ -288,6 +288,7 @@ html {
     font-size: 1.7vh;
 }
 
+
 /* Horarios */
 
 .button-schedule {
@@ -337,10 +338,6 @@ html {
 
 .schedule-spacing {
     margin-bottom: 1.5vh;
-}
-
-.button-schedule-download:last-of-type {
-    margin-bottom: 2vh;
 }
 
 /* Footer */
