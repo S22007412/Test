@@ -417,7 +417,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </iframe> 
                         </div>
                     
-                    <div class="classroom-end-spacing"></div>
+                        <div class="classroom-end-spacing"></div>
 
                     </div>
                     
@@ -428,7 +428,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         <script src="/scripts/upload-form-visibility.js"></script>
 
         <script src="/scripts/slider.js"></script>
-        </div>
     </div>
 
     <div class="navbar-fixed-bottom">
