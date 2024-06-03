@@ -9,6 +9,7 @@ $_SESSION['retry'] = 'false';
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no">
     <title>UBIUV</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles.css">
