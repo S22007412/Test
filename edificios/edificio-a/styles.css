@@ -346,6 +346,12 @@ html {
     margin-bottom: 1.5vh;
 }
 
+
+.schedule-end-spacing {
+    margin-bottom: 2vh;
+}
+
+
 /* Footer */
 
 .navbar-fixed-bottom {
