@@ -233,6 +233,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             ?>
                         </div>
                     </div>
+                    <div class="classroom-end-spacing"></div>
                     
                     <script>
                         function toggleBox(id) {
@@ -385,7 +386,34 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     </div>
                     <div class="slide-content">
                         
+                    <div class="slide-content">
+                        <div class="test">
+                            <div class="edificio">
+                                <!-- Use the relative path for the img src attribute -->
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
+                                <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
+                            </div>
 
+                            <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
+                            
+                            <!-- Show the modify button -->
+                            <div class="modify-container">
+                            <button class="modify-button button-modify" id="modifyButton">Modificar</button>
+                            
+                            <!-- File upload form (hidden by default) -->
+                            <div class="modify-form" style="display: none;">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <input class="modify-input" type="file" name="new_image" id="new_image">
+                                    <br><button class="accept-button button-modify" type="submit">Aceptar</button>
+                                </form>
+                            </div>
+
+                        
+                            <?php } ?>
+                            </div>
+                        </div>
+
+                        <!-- Recorrido video -->
                         
                     </div>
                     
