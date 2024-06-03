@@ -374,7 +374,7 @@ html {
 }
 
 .route-video {
-    margin-top: 2vh;
+    margin: 2vh auto 0;
     border-radius: 1.5vh;
     
 }
