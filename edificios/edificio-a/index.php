@@ -225,7 +225,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             ?>
                         </div>
                         <button class="button-classroom" onclick="toggleBox('clasroom5')">Salón de Actos</button>
-                        <div class="info-classroom" id="clasroom5" style="display: none;">
+                        <div class="info-classroom info-classroom-last" id="clasroom5" style="display: none;">
                         <?php 
                                 $id_salon = '6';
                                 $id_edificio = '1';

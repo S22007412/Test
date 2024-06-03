@@ -252,6 +252,7 @@ html {
     font-size: 1.7vh;
 }
 
+
 .modify-textarea {
     border-radius: 2vh;
     padding: 2vh;
@@ -286,6 +287,10 @@ html {
     padding: 2vh;
     padding-top: 4.6vh;
     font-size: 1.7vh;
+}
+
+.info-classroom-last {
+    margin-bottom: 4.6vh;
 }
 
 
