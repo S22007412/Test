@@ -174,7 +174,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     </div>
                 </div>
 
-                <div class="slide" id="slide-3">
+                <div class="slide" id="slide-2">
                     <div class="slider-container">
                         <div class="slide-header">
                             <button class="nav prev">‹</button>
@@ -214,68 +214,15 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </div>
                         </div>
 
-                        <!-- Horarios-->
 
-                        <?php
-                            // Determine the absolute path to the schedules.json file
-                            $schedulesDownloadJsonFilePath = '/var/www/html/config/schedules_download.json';
-                                                        
-                            // Read the JSON file
-                            $schedulesDownloadJsonString = @file_get_contents($schedulesDownloadJsonFilePath);
-                                                        
-                            if ($schedulesDownloadJsonString === false) {
-                                die('Error: Unable to read the JSON file at ' . $jsonFilePath);
-                            }
-                            
-                            $schedulesDownload = json_decode($schedulesDownloadJsonString, true);
-                            
-                            if (json_last_error() !== JSON_ERROR_NONE) {
-                                die('Error: Invalid JSON data.');
-                            }
-                        ?>
-
-                        <?php
-                            // Determine the absolute path to the schedules.json file
-                            $schedulesViewJsonFilePath = '/var/www/html/config/schedules_view.json';
-                                                        
-                            // Read the JSON file
-                            $schedulesViewJsonString = @file_get_contents($schedulesViewJsonFilePath);
-                                                        
-                            if ($schedulesViewJsonString === false) {
-                                die('Error: Unable to read the JSON file at ' . $jsonFilePath);
-                            }
-                            
-                            $schedulesView = json_decode($schedulesViewJsonString, true);
-                            
-                            if (json_last_error() !== JSON_ERROR_NONE) {
-                                die('Error: Invalid JSON data.');
-                            }
-                        ?>
-
-
-<!--
-                        <button class="button-schedule" onclick="toggleBox('schedule1')">A-14</button>
-                        <div class="info-schedule" id="schedule1" style="display: none;">
-                            <div class="info-schedule-text">Matutino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-
-                            <div class="info-schedule-text">Vespertino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-                            
-                        </div>
-                    -->
-
-                    <button class="button-schedule" onclick="toggleBox('schedule2')">Cafetería</button>
+                        <button class="button-schedule" onclick="toggleBox('schedule2')">Cafetería</button>
                         <div class="info-schedule" id="schedule2" style="display: block;">
-                            <div class="info-schedule-text">Lunes a Viernes:</div>
-                            <div class="info-schedule-text">7:00 a 21:00</div>
-            <div class="schedule-spacing"></div>
-                            
-                            
-                    
-                    <div class="schedule-end-spacing"></div>
-                        
-                    
+                        <div class="info-schedule-text">Lunes a Viernes:</div>
+                        <div class="info-schedule-text">7:00 a 21:00</div>
+                        <div class="schedule-spacing"></div>
+                        <div class="schedule-end-spacing"></div>
+                    </div> 
+                </div>
 
                 <div class="slide" id="slide-3">
                     <div class="slider-container">
