@@ -388,6 +388,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     <div class="slide-content">
                         
                     <div class="slide-content">
+                            <!-- Building Image -->
                         <div class="test">
                             <div class="edificio">
                                 <!-- Use the relative path for the img src attribute -->
@@ -415,6 +416,29 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
 
                         <!-- Recorrido video -->
+                        
+                        
+                        <?php
+                            // Determine the absolute path to the schedules.json file
+                            $routeLinksJsonFilePath = '/var/www/html/config/route_links.json';
+                                                        
+                            // Read the JSON file
+                            $routeLinksJsonString = @file_get_contents($routeLinksJsonFilePath);
+                                                        
+                            if ($routeLinksJsonString === false) {
+                                die('Error: Unable to read the JSON file at ' . $jsonFilePath);
+                            }
+                            
+                            $routeLinks = json_decode($routeLinksJsonString, true);
+                            
+                            if (json_last_error() !== JSON_ERROR_NONE) {
+                                die('Error: Invalid JSON data.');
+                            }
+                        ?>
+
+
+                        <iframe width="100%" height="100%" src="<?php echo htmlspecialchars($routeLinks['a-16-matutino']); ?>">
+                        </iframe> 
                         
                     </div>
                     

@@ -1,11 +1,5 @@
 {
-    "edificio-a": "/assets/edificios/edificio-a.png",
-    "edificio-b": "/assets/edificios/edificio-b.png",
-    "edificio-g": "/assets/edificios/edificio-g.png",
-    "edificio-e": "/assets/edificios/edificio-e.png",
-    "edificio-cafeteria": "/assets/edificios/cafeteria.png",
-    "edificio-cancha": "/assets/edificios/cancha.png",
-    "salon-a-14": "/assets/salones/a-14.png",
+    "salon-a-14": "https://www.youtube.com/embed/tgbNymZ7vqY",
     "salon-a-15": "/assets/salones/a-15.png",
     "salon-a-16": "/assets/salones/a-16.png",
     "salon-g-3": "/assets/salones/g-13.png",
