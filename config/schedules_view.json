@@ -1,4 +1,10 @@
 {
     "a-15-matutino": "/horarios/Horario A-15 Matutino.pdf",
-    "a-16-matutino": "/horarios/Horario A-16 Matutino.pdf"
+    "a-16-matutino": "/horarios/Horario A-16 Matutino.pdf",
+    "cc-matutino": "/horarios/Horario Centro de Cómputo Matutino.pdf",
+    "cc-vespertino": "/horarios/Horario Centro de Cómputo Vespertino.pdf",
+    "g-3-matutino": "/horarios/Horario G-3 Matutino.pdf",
+    "electronica-matutino": "/horarios/Horario Laboratorio de Electrónica Matutino.pdf",
+    "electronica-vespertino": "/horarios/Horario Laboratorio de Electrónica Vespertino.pdf",
+    "lab-control-matutino": "/horarios/Horarios Laboratorio de Control.pdf"
 }
