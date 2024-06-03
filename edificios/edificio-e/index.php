@@ -13,7 +13,7 @@ $absolute_target_dir = "/var/www/html/assets/";
 $json_file_path = '/var/www/html/config/image_paths.json';
 
 // The tag for this specific page
-$page_tag = 'edificio-b';
+$page_tag = 'edificio-e';
 
 // Include the image upload logic
 include '/var/www/html/php/image-upload.php';
@@ -28,7 +28,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no">
-    <title>UBIUV Edificio B</title>
+    <title>UBIUV Edificio E</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <!-- Add Poppins font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins">
@@ -63,7 +63,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
     <div class="main">
         <!-- Building Tittle -->
         <div class="edificio">
-            <button class="button-page">Edificio B</button>
+            <button class="button-page">Edificio E</button>
         </div>
         
         <div class="slider">
@@ -88,7 +88,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="test">
                             <div class="edificio">
                                 <!-- Use the relative path for the img src attribute -->
-                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> 
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio E"> 
                                 <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
                             </div>
 
@@ -119,7 +119,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <div class="info-content">
                                     <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis nec dui id tempus. Mauris ornare ipsum faucibus pulvinar maximus. Sed ligula mi, dignissim non sem a, volutpat pharetra nibh. Nunc lacus sapien, sagittis in magna id, faucibus fermentum lectus. Fusce ac est euismod, posuere lorem vitae, consequat massa. -->
                                     <?php 
-                                        $id_edificio = '2';
+                                        $id_edificio = '4';
                                         include '/var/www/html/php/edificio-info.php'; 
                                     ?>
                                 </div>
@@ -190,19 +190,19 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
                     </div>
                     <div class="slide-content">
-                        <button class="button-classroom" onclick="toggleBox('clasroom1')">Biblioteca</button>
+                        <button class="button-classroom" onclick="toggleBox('clasroom1')">Centro de Cómputo</button>
                         <div class="info-classroom" id="clasroom1" style="display: none;">
                             <?php 
-                                $id_salon = '8';
-                                $id_edificio = '2';
+                                $id_salon = '7';
+                                $id_edificio = '4';
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
-                        <button class="button-classroom" onclick="toggleBox('classroom2')">Laboratorio de Control</button>
+                        <button class="button-classroom" onclick="toggleBox('classroom2')">Lab. de Electrónica</button>
                         <div class="info-classroom" id="classroom2" style="display: none;">
                             <?php 
-                                $id_salon = '10';
-                                $id_edificio = '2';
+                                $id_salon = '9';
+                                $id_edificio = '4';
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
@@ -241,7 +241,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="test">
                             <div class="edificio">
                                 <!-- Use the relative path for the img src attribute -->
-                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio B"> 
+                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio E"> 
                                 <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
                             </div>
 
@@ -315,20 +315,46 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
                     -->
 
-                        <button class="button-schedule" onclick="toggleBox('schedule2')">Biblioteca</button>
+                    <button class="button-schedule" onclick="toggleBox('schedule2')">Centro de Cómputo</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
-                            <div class="info-schedule-text">Lunes a Viernes:</div>
-                            <div class="info-schedule-text">7:00 a 21:00</div>
-            <div class="schedule-spacing"></div>
+                            <div class="info-schedule-text">Matutino:</div>
+                            <a href="<?php echo htmlspecialchars($schedulesView['cc-matutino']); ?>">
+                                <button class="button-schedule-download">Ver</button>
+                            </a>
+                            <div class="schedule-spacing"></div>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>">
+                                <button class="button-schedule-download">Descargar</button>
+                            </a>
                             
-                            
+                            <div class="info-schedule-text">Vespertino:</div>
+                            <a href="<?php echo htmlspecialchars($schedulesView['cc-vespertino']); ?>">
+                                <button class="button-schedule-download">Ver</button>
+                            </a>
+                            <div class="schedule-spacing"></div>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>">
+                                <button class="button-schedule-download">Descargar</button>
+                            </a>
                         </div>
 
-                        <button class="button-schedule" onclick="toggleBox('schedule3')">Laboratorio de Control</button>
+                        <button class="button-schedule" onclick="toggleBox('schedule3')">Lab. de Electrónica</button>
                         <div class="info-schedule" id="schedule3" style="display: none;">
-                            <div class="info-schedule-text">Lunes a Viernes:</div>
-                            <div class="info-schedule-text">7:00 a 21:00</div>
+                            <div class="info-schedule-text">Matutino:</div>
+                            <a href="<?php echo htmlspecialchars($schedulesView['electronica-matutino']); ?>">
+                                <button class="button-schedule-download">Ver</button>
+                            </a>
                             <div class="schedule-spacing"></div>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>">
+                                <button class="button-schedule-download">Descargar</button>
+                            </a>
+
+                            <div class="info-schedule-text">Vespertino:</div>
+                            <a href="<?php echo htmlspecialchars($schedulesView['electronica-vespertino']); ?>">
+                                <button class="button-schedule-download">Ver</button>
+                            </a>
+                            <div class="schedule-spacing"></div>
+                            <a href="<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>">
+                                <button class="button-schedule-download">Descargar</button>
+                            </a>
             
                         </div>
                         <div class="schedule-end-spacing"></div>
@@ -378,16 +404,16 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <iframe class="route-video" width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>-->
                         
-                        <button class="button-route" onclick="toggleBox('route1')">Biblioteca</button>
+                        <button class="button-route" onclick="toggleBox('route1')">Centro de Cómputo</button>
                         <div class="info-route" id="route1" style="display: none;">
                             <iframe class="route-video" width="100%" height="100%" 
-                                src="<?php echo htmlspecialchars($routeLinks['salon-biblioteca']); ?>">
+                                src="<?php echo htmlspecialchars($routeLinks['salon-cc']); ?>">
                             </iframe> 
                         </div>
-                        <button class="button-route" onclick="toggleBox('route2')">Laboratorio de Control</button>
+                        <button class="button-route" onclick="toggleBox('route2')">Lab. de Electrónica</button>
                         <div class="info-route" id="route2" style="display: none;">
                             <iframe class="route-video" width="100%" height="100%" 
-                                src="<?php echo htmlspecialchars($routeLinks['salon-lab-control']); ?>">
+                                src="<?php echo htmlspecialchars($routeLinks['salon-lab-electronica']); ?>">
                             </iframe> 
                         </div>
                     
