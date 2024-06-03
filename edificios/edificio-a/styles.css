@@ -351,6 +351,32 @@ html {
     margin-bottom: 4vh;
 }
 
+/* Routes */
+
+.button-route {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 7vh;
+    height: 5.2vh;
+    width: 36vh;
+    max-width: 70vw;
+    vertical-align: middle;
+    margin: 4vh auto 0;
+    font-size: 2vh;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.route-end-spacing {
+    margin-bottom: 4vh;
+}
+
+.route-video {
+    margin-top: 2vh;
+    border-radius: 1.5vh;
+}
 
 /* Footer */
 

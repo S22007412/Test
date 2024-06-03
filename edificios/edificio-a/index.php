@@ -200,32 +200,32 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
-                        <button class="button-classroom" onclick="toggleBox('clasroom2')">A-15</button>
-                        <div class="info-classroom" id="clasroom2" style="display: none;">
+                        <button class="button-classroom" onclick="toggleBox('classroom2')">A-15</button>
+                        <div class="info-classroom" id="classroom2" style="display: none;">
                             <?php 
                                 $id_salon = '2';
                                 $id_edificio = '1';
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
-                        <button class="button-classroom" onclick="toggleBox('clasroom3')">A-16</button>
-                        <div class="info-classroom" id="clasroom3" style="display: none;">
+                        <button class="button-classroom" onclick="toggleBox('classroom3')">A-16</button>
+                        <div class="info-classroom" id="classroom3" style="display: none;">
                         <?php 
                                 $id_salon = '3';
                                 $id_edificio = '1';
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
-                        <button class="button-classroom" onclick="toggleBox('clasroom4')">Aula Magna</button>
-                        <div class="info-classroom" id="clasroom4" style="display: none;">
+                        <button class="button-classroom" onclick="toggleBox('classroom4')">Aula Magna</button>
+                        <div class="info-classroom" id="classroom4" style="display: none;">
                         <?php 
                                 $id_salon = '5';
                                 $id_edificio = '1';
                                 include '/var/www/html/php/salon-info.php'; 
                             ?>
                         </div>
-                        <button class="button-classroom" onclick="toggleBox('clasroom5')">Salón de Actos</button>
-                        <div class="info-classroom info-classroom-last" id="clasroom5" style="display: none;">
+                        <button class="button-classroom" onclick="toggleBox('classroom5')">Salón de Actos</button>
+                        <div class="info-classroom info-classroom-last" id="classroom5" style="display: none;">
                         <?php 
                                 $id_salon = '6';
                                 $id_edificio = '1';
@@ -388,32 +388,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     <div class="slide-content">
                         
                     <div class="slide-content">
-                            <!-- Building Image -->
-                        <div class="test">
-                            <div class="edificio">
-                                <!-- Use the relative path for the img src attribute -->
-                                <img class="edificio-img" src="<?php echo htmlspecialchars($relative_target_file); ?>" alt="Edificio A"> 
-                                <!--<img class="edificio-img" src="../../assets/edificios/edificio-a.png" alt="Edificio A"> -->
-                            </div>
-
-                            <?php if (isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
-                            
-                            <!-- Show the modify button -->
-                            <div class="modify-container">
-                            <button class="modify-button button-modify" id="modifyButton">Modificar</button>
-                            
-                            <!-- File upload form (hidden by default) -->
-                            <div class="modify-form" style="display: none;">
-                                <form action="" method="post" enctype="multipart/form-data">
-                                    <input class="modify-input" type="file" name="new_image" id="new_image">
-                                    <br><button class="accept-button button-modify" type="submit">Aceptar</button>
-                                </form>
-                            </div>
-
-                        
-                            <?php } ?>
-                            </div>
-                        </div>
 
                         <!-- Recorrido video -->
                         
@@ -436,10 +410,47 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             }
                         ?>
 
+                        <!---
+                        <iframe class="route-video" width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>-->
 
-                        <iframe width="100%" height="100%" src="<?php echo htmlspecialchars($routeLinks['salon-a-15']); ?>">
+                        <iframe class="route-video" width="100%" height="100%" 
+                        src="<?php echo htmlspecialchars($routeLinks['salon-a-15']); ?>">
                         </iframe> 
                         
+                        <button class="button-route" onclick="toggleBox('route1')">A-14</button>
+                        <div class="info-route" id="route1" style="display: none;">
+                            <iframe class="route-video" width="100%" height="100%" 
+                                src="<?php echo htmlspecialchars($routeLinks['salon-a-14']); ?>">
+                            </iframe> 
+                        </div>
+                        <button class="button-route" onclick="toggleBox('route2')">A-15</button>
+                        <div class="info-route" id="route2" style="display: none;">
+                            <iframe class="route-video" width="100%" height="100%" 
+                                src="<?php echo htmlspecialchars($routeLinks['salon-a-15']); ?>">
+                            </iframe> 
+                        </div>
+                        <button class="button-route" onclick="toggleBox('route3')">A-16</button>
+                        <div class="info-route" id="route3" style="display: none;">
+                            <iframe class="route-video" width="100%" height="100%" 
+                                src="<?php echo htmlspecialchars($routeLinks['salon-a-16']); ?>">
+                            </iframe> 
+                        </div>
+                        <button class="button-route" onclick="toggleBox('route4')">Aula Magna</button>
+                        <div class="info-route" id="route4" style="display: none;">
+                            <iframe class="route-video" width="100%" height="100%" 
+                                src="<?php echo htmlspecialchars($routeLinks['salon-aula-magna']); ?>">
+                            </iframe> 
+                        </div>
+                        <button class="button-route" onclick="toggleBox('route5')">Salón de Actos</button>
+                        <div class="info-route" id="route5" style="display: none;">
+                            <iframe class="route-video" width="100%" height="100%" 
+                                src="<?php echo htmlspecialchars($routeLinks['salon-actos']); ?>">
+                            </iframe> 
+                        </div>
+                    </div>
+                    <div class="classroom-end-spacing"></div>
+
                     </div>
                     
                 </div>
