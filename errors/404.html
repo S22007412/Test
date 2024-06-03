@@ -82,16 +82,21 @@ p {
 .button-spacing {
     margin-top: 2.5vh;
 }
+
+.monoserio {
+    text-align: center;
+}
     </style>
 </head>
 <body>
     <div class="main">
         <div class="logoubiuv">
-            <img class="logouv" src="assets/logo-uv.png" alt="Logo UV">
+            <img class="logouv" src="/assets/logo-uv.png" alt="Logo UV">
             <h1>UBIUV</h1>
         </div>
         <div class="intro">
-            <img src="/assets/monoserio.jpg">
+            <div class="monoserio"><img src="/assets/monoserio.png" alt="Mono Serio"></div>
+            
             <h1>Error 404</h1>
             <p>Vaya, parece que has caído a una página que realmente no existe, ¿fue un error o hiciste algo raro? De todas maneras, te recomiendo salir de aquí, no será que encuentres algún otro problema.</p>
         </div>
@@ -102,6 +107,11 @@ p {
                 </a>
             </div>
             <div class="button-spacing"></div>
+            <div class="button">
+                <a href="https://github.com/S22007412/UBIUV/issues/new">
+                    <button class="button button1"><p>Reportar el problema</p></button>
+                </a>
+            </div>
             <!--
             <div class="button">
                 <form action="php/set-session-guest.php" method="post">
