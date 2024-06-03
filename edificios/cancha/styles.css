@@ -228,6 +228,10 @@ html {
     border-radius: 1.5vh;
 }
 
+.spacing-history {
+    margin-bottom: 2vh;
+}
+
 /* Information */
 
 .modify-container:last-of-type {
