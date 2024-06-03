@@ -413,10 +413,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <!---
                         <iframe class="route-video" width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>-->
-
-                        <iframe class="route-video" width="100%" height="100%" 
-                        src="<?php echo htmlspecialchars($routeLinks['salon-a-15']); ?>">
-                        </iframe> 
                         
                         <button class="button-route" onclick="toggleBox('route1')">A-14</button>
                         <div class="info-route" id="route1" style="display: none;">
