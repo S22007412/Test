@@ -339,6 +339,10 @@ html {
     margin-bottom: 1.5vh;
 }
 
+.button-schedule-download:last-of-type {
+    margin-bottom: 2vh;
+}
+
 /* Footer */
 
 .navbar-fixed-bottom {
