@@ -357,9 +357,9 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </a>
             
                         </div>
-                        <div class="schedule-end-spacing"></div>
+                    <div class="schedule-end-spacing"></div>
                         
-                    </div>
+                </div>
                     
 
                 <div class="slide" id="slide-4">
