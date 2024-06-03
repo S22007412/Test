@@ -171,8 +171,9 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <?php } ?>
 
                         </div>
+                        <div class="spacing-history"></div>
                     </div>
-                    <div class="spacing-history"></div>
+                    
                 </div>
 
                 <div class="slide" id="slide-2">
