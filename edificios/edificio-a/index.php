@@ -346,6 +346,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <a href="<?php echo htmlspecialchars($schedulesView['a-15-matutino']); ?>">
                 <button class="button-schedule-download">Ver</button>
             </a>
+            <div class="schedule-spacing"></div>
                             <a href="<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>">
                 <button class="button-schedule-download">Descargar</button>
             </a>
@@ -358,6 +359,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <a href="<?php echo htmlspecialchars($schedulesView['a-16-matutino']); ?>">
                 <button class="button-schedule-download">Ver</button>
             </a>
+            <div class="schedule-spacing"></div>
                             <a href="<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>">
                 <button class="button-schedule-download">Descargar</button>
             </a>
