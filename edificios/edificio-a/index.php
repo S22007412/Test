@@ -292,10 +292,22 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <!-- Horarios-->
 
                         <?php
-                                // Read the JSON file
-                            $jsonString = file_get_contents(__DIR__ . '/var/www/html/config/schedules-download.json');
-                            $schedules = json_decode($jsonString, true);
-                        ?>
+// Determine the absolute path to the schedules.json file
+$jsonFilePath = '/var/www/html/config/schedules.json';
+
+// Read the JSON file
+$jsonString = @file_get_contents($jsonFilePath);
+
+if ($jsonString === false) {
+    die('Error: Unable to read the JSON file at ' . $jsonFilePath);
+}
+
+$schedules = json_decode($jsonString, true);
+
+if (json_last_error() !== JSON_ERROR_NONE) {
+    die('Error: Invalid JSON data.');
+}
+?>
 
 
 <!--
@@ -314,8 +326,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="info-schedule" id="schedule2" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
                             <a href="<?php echo htmlspecialchars($schedules['a-15-matutino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+                <button class="button-schedule-download">Descargar</button>
+            </a>
                             
                         </div>
 
@@ -323,8 +335,8 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="info-schedule" id="schedule3" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
                             <a href="<?php echo htmlspecialchars($schedules['a-16-matutino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+                <button class="button-schedule-download">Descargar</button>
+            </a>
                         </div>
                         
                     </div>
