@@ -328,14 +328,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="info-schedule" id="schedule3" style="display: none;">
                             <div class="info-schedule-text">Lunes a Viernes:</div>
                             <div class="info-schedule-text">7:00 a 21:00</div>
-            <div class="schedule-spacing"></div>
+                            <div class="schedule-spacing"></div>
             
                         </div>
                         <div class="schedule-end-spacing"></div>
                         
                     </div>
                     
-                
+                </div>
 
                 <div class="slide" id="slide-4">
                     <div class="slider-container">
