@@ -288,6 +288,16 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <?php } ?>
                             </div>
                         </div>
+
+                        <!-- Horarios-->
+
+                        <?php
+                                // Read the JSON file
+                            $jsonString = file_get_contents('/config/schedules.json');
+                            $schedules = json_decode($jsonString, true);
+                        ?>
+
+
 <!--
                         <button class="button-schedule" onclick="toggleBox('schedule1')">A-14</button>
                         <div class="info-schedule" id="schedule1" style="display: none;">
@@ -303,7 +313,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
-                            <a href="/horarios/Horario A-15 Matutino.pdf">
+                            <a href="<?php echo htmlspecialchars($schedules['a-15-matutino']); ?>">
                                 <button class="button-schedule-download">Descargar</button>
                             </a>
                             
@@ -312,7 +322,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <button class="button-schedule" onclick="toggleBox('schedule3')">A-16</button>
                         <div class="info-schedule" id="schedule3" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
-                            <a href="https://download1592.mediafire.com/qpj0ao37khog3kyKnjXc7s8jLa4BZwoMepjcYuxZdU80pltuN7eUQ33jJN7ahgRQhv9hXd84c0aJSqCDy4oFNdr3seX5H1q8rrQxc9HQvtazPYUwJTZiWl8pNz-tz5ezkRHhAre32Km_HcHafYNpT5rpHjE-ljcdwqnudQ6wxyE/i6ysduf5p8ond1u/Horario+A-16+Matutino.pdf">
+                            <a href="<?php echo htmlspecialchars($schedules['a-16-matutino']); ?>">
                                 <button class="button-schedule-download">Descargar</button>
                             </a>
                         </div>
