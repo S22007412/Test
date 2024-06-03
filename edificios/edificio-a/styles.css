@@ -376,6 +376,8 @@ html {
 .route-video {
     margin-top: 2vh;
     border-radius: 1.5vh;
+    max-height: 24vh;
+    max-width: 80vw;
 }
 
 /* Footer */
