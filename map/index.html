@@ -61,5 +61,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // Callback function automatically called when location services initialized in iOS app
+function median_geolocation_ready() {
+  navigator.geolocation.getCurrentPosition(locationSuccess, locationError, locationOptions);
+}
+        
+// Use callback function as a helper function and call immediately if not in iOS app
+if (!navigator.userAgent.includes('MedianIOS')) {
+  median_geolocation_ready();
+}
+
+    </script>
 </body>
 </html>
