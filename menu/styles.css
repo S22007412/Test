@@ -19,7 +19,8 @@ body {
 
 .menu-options {
     background-color: #444;
-    padding: 20px;
+    padding: 0; /* Eliminamos el padding para evitar espacio entre los bordes */
+    border: 1px solid #fff; /* Borde blanco alrededor del contenedor */
     border-radius: 5px;
 }
 
