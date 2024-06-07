@@ -356,7 +356,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             document.getElementById('download-button-1').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesView['a-15-matutino']); ?>', open: false})}
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})}
                                 else {
                                     window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>';
                                 }
@@ -365,7 +365,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             document.getElementById('download-button-2').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesView['a-16-matutino']); ?>', open: false})}
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
                                 else {
                                     window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
                                 }
