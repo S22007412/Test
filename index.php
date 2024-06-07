@@ -44,6 +44,14 @@ $_SESSION['retry'] = 'false';
                 </a>
             </div>
             -->
+            <button id="median">median</button>
+        <script>
+            document.getElementById('median').addEventListener('click', function() {
+                median.window.open('https://download1527.mediafire.com/fa8tv4b4cz3g57cF84sUrbgL-Hh8QmNVrPzbuffOJ3CCCTmXoUerDudHGNBQq38XGZWQfjEPruRa2uh21I25g3kwxOscCO0w9o0WFQTCCuAlXjkQWUjX6BaZifOyV3t5kSnQ3Y3EVgQybvzxR1GRTHcnBNU0bLlMDUNVbbzRPQ/qikzn56hjhrhcpu/Horario+A-15+Matutino.pdf', external);
+            });
+            
+            
+        </script>
         </div>
     </div>
 </body>
