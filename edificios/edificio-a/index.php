@@ -339,6 +339,16 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
                     -->
 
+                        <script>
+                            document.getElementById('download-button-1').addEventListener('click', function() {
+                                median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})
+                            });
+
+                            document.getElementById('download-button-2').addEventListener('click', function() {
+                                median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})
+                            });
+                        </script>
+
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
                             <div class="info-schedule-text">Matutino:</div>
@@ -347,7 +357,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             </a>
             <div class="schedule-spacing"></div>
                             <a href="<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>">
-                <button class="button-schedule-download">Descargar</button>
+                <button class="button-schedule-download" id="download-button-1">Descargar</button>
             </a>
                             
                         </div>
@@ -360,7 +370,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             </a>
             <div class="schedule-spacing"></div>
                             <a href="<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>">
-                <button class="button-schedule-download">Descargar</button>
+                <button class="button-schedule-download" id="download-button-1">Descargar</button>
             </a>
             
                         </div>
