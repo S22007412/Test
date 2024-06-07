@@ -322,18 +322,18 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <button class="button-schedule-download">Ver</button>
                             </a>
                             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+
+                                <button class="button-schedule-download" id="download-button-1">Descargar</button>
+
                             
                             <div class="info-schedule-text">Vespertino:</div>
                             <a href="<?php echo htmlspecialchars($schedulesView['cc-vespertino']); ?>">
                                 <button class="button-schedule-download">Ver</button>
                             </a>
                             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+
+                                <button class="button-schedule-download" id="download-button-2">Descargar</button>
+
                         </div>
 
                         <button class="button-schedule" onclick="toggleBox('schedule3')">Lab. de Electrónica</button>
@@ -343,20 +343,59 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <button class="button-schedule-download">Ver</button>
                             </a>
                             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+
+                                <button class="button-schedule-download" id="download-button-3">Descargar</button>
+
 
                             <div class="info-schedule-text">Vespertino:</div>
                             <a href="<?php echo htmlspecialchars($schedulesView['electronica-vespertino']); ?>">
                                 <button class="button-schedule-download">Ver</button>
                             </a>
                             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
+
+                                <button class="button-schedule-download" id="download-button-4">Descargar</button>
+
             
                         </div>
+
+                        <script>
+                            document.getElementById('download-button-1').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>';
+                                }
+                            });
+
+                            document.getElementById('download-button-2').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>';
+                                }
+                            });
+
+                            document.getElementById('download-button-3').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>';
+                                }
+                            });
+
+                            document.getElementById('download-button-4').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>';
+                                }
+                            });
+                        </script>
+
                     <div class="schedule-end-spacing"></div>
                         
                 </div>

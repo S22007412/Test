@@ -314,11 +314,23 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 <button class="button-schedule-download">Ver</button>
                             </a>
                             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['g-3-matutino']); ?>">
-                                <button class="button-schedule-download">Descargar</button>
-                            </a>
-                            
+
+                                <button class="button-schedule-download" id="download-button-1">Descargar</button>
+
+
                         </div>
+
+                        <script>
+                            document.getElementById('download-button-1').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['g-3-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['g-3-matutino']); ?>';
+                                }
+                            });
+
+                        </script>
 
                     <div class="schedule-end-spacing"></div>
                         
