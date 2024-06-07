@@ -1,10 +1,10 @@
 {
     "a-15-matutino": "id=12TzbcW_xF-e0-Q9ZeqbrFea63s7LbVq7",
-    "a-16-matutino": "https://drive.google.com/uc?export=download&id=1Zz7J8xhfxc0fb6OeLhjI13byeFvAJcDs",
-    "cc-matutino": "https://drive.google.com/uc?export=download&id=1E5UTg46x5HArvuj1vzKsGP3V5J0AQ4vg",
-    "cc-vespertino": "https://drive.google.com/uc?export=download&id=1WIAK6F4cbz5SWNLjQWU8LZSfTY9Dph6M",
-    "g-3-matutino": "https://drive.google.com/uc?export=download&id=10SY-xhVFuUhnZ11rGlVe1--MgnNmgdkI",
-    "electronica-matutino": "https://drive.google.com/uc?export=download&id=1xvb_wYMwnkDvaXc-343QvQLBDaVv37en",
-    "electronica-vespertino": "https://drive.google.com/uc?export=download&id=1IZ8bd4v238EJg5_CtxNveHTlmYuqJYD1",
-    "lab-control-matutino": "https://drive.google.com/uc?export=download&id=11Ec_27oQJMW-y_VeKmZb2Gz8fvZvYi4E"
+    "a-16-matutino": "id=1Zz7J8xhfxc0fb6OeLhjI13byeFvAJcDs",
+    "cc-matutino": "id=1E5UTg46x5HArvuj1vzKsGP3V5J0AQ4vg",
+    "cc-vespertino": "id=1WIAK6F4cbz5SWNLjQWU8LZSfTY9Dph6M",
+    "g-3-matutino": "id=10SY-xhVFuUhnZ11rGlVe1--MgnNmgdkI",
+    "electronica-matutino": "id=1xvb_wYMwnkDvaXc-343QvQLBDaVv37en",
+    "electronica-vespertino": "id=1IZ8bd4v238EJg5_CtxNveHTlmYuqJYD1",
+    "lab-control-matutino": "id=11Ec_27oQJMW-y_VeKmZb2Gz8fvZvYi4E"
 }

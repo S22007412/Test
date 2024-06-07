@@ -362,36 +362,36 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             document.getElementById('download-button-1').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>', open: false})}
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>', open: false})}
                                 else {
-                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>';
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['cc-matutino']); ?>';
                                 }
                             });
 
                             document.getElementById('download-button-2').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>', open: false})}
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>', open: false})}
                                 else {
-                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>';
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['cc-vespertino']); ?>';
                                 }
                             });
 
                             document.getElementById('download-button-3').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>', open: false})}
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>', open: false})}
                                 else {
-                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>';
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>';
                                 }
                             });
 
                             document.getElementById('download-button-4').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>', open: false})}
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>', open: false})}
                                 else {
-                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>';
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['electronica-vespertino']); ?>';
                                 }
                             });
                         </script>
