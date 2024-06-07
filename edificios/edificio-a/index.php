@@ -356,7 +356,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             document.getElementById('download-button-1').addEventListener('click', function() {
 
                                 if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})}
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})}
                                 else {
                                     window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>';
                                 }
