@@ -326,22 +326,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             }
                         ?>
 
-                        <script>
-                            document.getElementById('download-button-1').addEventListener('click', function() {
-
-                                
-                                    window.location.href = "<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>";
-                            });
-
-                            document.getElementById('download-button-2').addEventListener('click', function() {
-
-                                if (navigator.userAgent.indexOf('median') > -1) {
-                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
-                                else {
-                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
-                                }
-                            });
-                        </script>
+                        
 
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
@@ -366,6 +351,27 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
 
             
                         </div>
+
+                        <script>
+                            document.getElementById('download-button-1').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>';
+                                }
+                            });
+
+                            document.getElementById('download-button-2').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
+                                }
+                            });
+                        </script>
+
                         <div class="schedule-end-spacing"></div>
                         
                     </div>
