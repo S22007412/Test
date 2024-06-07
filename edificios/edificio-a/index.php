@@ -326,19 +326,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             }
                         ?>
 
-
-<!--
-                        <button class="button-schedule" onclick="toggleBox('schedule1')">A-14</button>
-                        <div class="info-schedule" id="schedule1" style="display: none;">
-                            <div class="info-schedule-text">Matutino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-
-                            <div class="info-schedule-text">Vespertino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-                            
-                        </div>
-                    -->
-
                         <script>
                             document.getElementById('download-button-1').addEventListener('click', function() {
 
@@ -349,14 +336,14 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 }
                             });
 
-                            document.getElementById('download-button-12').addEventListener('click', function() {
+                            document.getElementById('download-button-2').addEventListener('click', function() {
 
-if (navigator.userAgent.indexOf('median') > -1) {
-    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
-else {
-    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
-}
-});
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
+                                }
+                            });
                         </script>
 
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
