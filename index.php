@@ -44,6 +44,8 @@ $_SESSION['retry'] = 'false';
                 </a>
             </div>
             -->
+
+            <!--
             <button id="median">median</button>
         <script>
             document.getElementById('median').addEventListener('click', function() {
@@ -52,6 +54,7 @@ $_SESSION['retry'] = 'false';
             
             
         </script>
+    -->
         </div>
     </div>
 </body>
