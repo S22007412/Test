@@ -382,7 +382,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                 if (navigator.userAgent.indexOf('median') > -1) {
                                     median.share.downloadFile({url: '<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>', open: false})}
                                 else {
-                                    window.location.href = '<<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>';
+                                    window.location.href = '<?php echo htmlspecialchars($schedulesDownload['electronica-matutino']); ?>';
                                 }
                             });
 
