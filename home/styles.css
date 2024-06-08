@@ -88,12 +88,16 @@ html {
     justify-content: center;
 }
 
-.facu-img {
-    height: 34vh;
+.facu-vid {
+    height: 22vh;
     width: 40vh;
     max-width: 80vw;
     border-radius: 2vh;
-    margin: 3vh 0 4vh;
+    margin: 8vh auto 12vh;
+}
+
+.facu-vid-frame {
+    border-radius: 2vh;
 }
 
 .ques {
