@@ -188,6 +188,7 @@ html {
     border-bottom: 1px solid #fff; 
     color: #fff;
     text-decoration: none;
+    text-align: left;
 }
 
 .menu-option:last-child {
