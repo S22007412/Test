@@ -430,9 +430,39 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
             <a href="/map/">
                 <img class="icon" src="/assets/icon-main.png">
             </a>
-            <a href="">
-                <img class="icon" src="/assets/icon-menu.png">
+            <a>
+                <img class="icon cursable" id="menu-button" src="/assets/icon-menu.png">
             </a>
         </div>
     </div>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    <div class="menu hidden" id="menu">
+        <div class="menu-options">
+            <a class="menu-option highlight">BARRA DE OPCIONES</a>
+            <a href="https://www.uv.mx/" class="menu-option">PÁGINA DE LA UV</a>
+            <a href="https://dsia.uv.mx/miuv/escritorio/login.aspx" class="menu-option">PÁGINA DE MIUV</a>
+            <a href="https://www.uv.mx/pozarica/fime/instalaciones/" class="menu-option">INSTALACIONES</a>
+            <a href="/about/" class="menu-option">ACERCA DE</a>
+            <a href="/login/" class="menu-option">CERRAR SESIÓN</a>
+        </div>
+        <div class="menu-content">
+            <div class="menu-logo-container">
+                <img src="/assets/logo-uv.png" alt="UBIUV">
+                <h1>UBIUV</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+    </script>
 </body>

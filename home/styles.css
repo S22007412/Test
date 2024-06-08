@@ -148,3 +148,93 @@ html {
     height: 5vh;
     margin: 0 10vw;
 }
+
+
+/* Menu */
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.menu {
+    width: 40vw;
+    height: 100vh;
+    background-color: #333;
+    padding: 25px;
+}
+
+.menu-title {
+    font-size: 1vh;
+    color: #bbb;
+    margin-bottom: 1vh;
+}
+
+.menu-options {
+    background-color: #444;
+    padding: 0; 
+    border: 0.2vh solid #fff; 
+    border-radius: 5px;
+}
+
+.menu-option {
+    display: block;
+    padding: 1.7vh 1.1vh;
+    border-bottom: 1px solid #fff; 
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-option:last-child {
+    border-bottom: none;
+}
+
+.menu-option:hover {
+    background-color: #555;
+}
+
+.menu-content {
+    margin-top: 8vh;
+    text-align: center;
+}
+
+.menu-logo-container {
+    background-color: #fff;
+    padding: 1.7vh;
+    border-radius: 1vh;
+    display: inline-block;
+}
+
+.menu-content img {
+    width: 10vh;
+    height: auto;
+}
+
+.menu h1 {
+    color: #000;
+    font-size: 3vh; 
+    margin: 1vh 0 0 0; 
+    text-align: center; 
+}
+
+.menu .highlight {
+    font-weight: bold; 
+    text-align: center;
+}
+
+.navbar-fixed-top {
+    z-index: 99;
+}
+
+.navbar-fixed-bottom {
+    z-index: 101;
+}
+
+.cursable {
+    cursor: pointer;
+}

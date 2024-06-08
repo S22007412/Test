@@ -341,7 +341,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         </div>
         <div class="menu-content">
             <div class="menu-logo-container">
-                <img src="../assets/logo-uv.png" alt="UBIUV">
+                <img src="/assets/logo-uv.png" alt="UBIUV">
                 <h1>UBIUV</h1>
             </div>
         </div>
