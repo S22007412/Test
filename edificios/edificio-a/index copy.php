@@ -326,18 +326,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             }
                         ?>
 
-
-<!--
-                        <button class="button-schedule" onclick="toggleBox('schedule1')">A-14</button>
-                        <div class="info-schedule" id="schedule1" style="display: none;">
-                            <div class="info-schedule-text">Matutino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-
-                            <div class="info-schedule-text">Vespertino:</div>
-                            <button class="button-schedule-download">Descargar</button>
-                            
-                        </div>
-                    -->
+                        
 
                         <button class="button-schedule" onclick="toggleBox('schedule2')">A-15</button>
                         <div class="info-schedule" id="schedule2" style="display: none;">
@@ -345,25 +334,44 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             <a href="<?php echo htmlspecialchars($schedulesView['a-15-matutino']); ?>">
                 <button class="button-schedule-download">Ver</button>
             </a>
-            <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>">
-                <button class="button-schedule-download">Descargar</button>
-            </a>
+            <div class="schedule-spacing"></div>   
+                <button class="button-schedule-download" id="download-button-1">Descargar</button>
                             
                         </div>
 
                         <button class="button-schedule" onclick="toggleBox('schedule3')">A-16</button>
-                        <div class="info-schedule" id="schedule3" style="display: none;">
+                        <div class="info-schedule" id="schedule3" style="display: none;">   
                             <div class="info-schedule-text">Matutino:</div>
                             <a href="<?php echo htmlspecialchars($schedulesView['a-16-matutino']); ?>">
                 <button class="button-schedule-download">Ver</button>
             </a>
             <div class="schedule-spacing"></div>
-                            <a href="<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>">
-                <button class="button-schedule-download">Descargar</button>
-            </a>
+                            
+                <button class="button-schedule-download" id="download-button-2">Descargar</button>
+
             
                         </div>
+
+                        <script>
+                            document.getElementById('download-button-1').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-15-matutino']); ?>';
+                                }
+                            });
+
+                            document.getElementById('download-button-2').addEventListener('click', function() {
+
+                                if (navigator.userAgent.indexOf('median') > -1) {
+                                    median.share.downloadFile({url: 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>', open: false})}
+                                else {
+                                    window.location.href = 'https://drive.google.com/uc?export=download&<?php echo htmlspecialchars($schedulesDownload['a-16-matutino']); ?>';
+                                }
+                            });
+                        </script>
+
                         <div class="schedule-end-spacing"></div>
                         
                     </div>
