@@ -2,10 +2,9 @@ html {
     background-color: rgb(55, 54, 54);    
 }
 
-.img {
-    width: 100%;
-    height: 100%;
-}
+/* Header */
+
+
 
 .navbar-fixed-top {
     position: fixed;
@@ -68,135 +67,61 @@ html {
     margin: 0 auto;
     border-bottom: solid 0.35vh rgb(255, 255, 255);
 }
+
+/* Content */
+
 .main {
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
-    font-family: Poppins;
+    padding-top: 12vh;
+    padding-bottom: 8vh;
     text-align: center;
 }
 
-.logoubiuv {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    width: 90%;
-    height: 8%;
-}
-
-.logouv {
-    width: 7vh;
-    height: 10vh;
-    margin-right: 50px;
-    padding-left: 160px;    
-}
-
-.ubiuv {
-    margin-top: 8px;
-    vertical-align: middle;
-    height: 10vh;
-    width: 10vh;
-    color: white;
-}
-
-.logoubiuv .logouv {
-    text-align: left;
-}
-
-.linea {
-    height: 5px;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 12vh;
-}
-
-h1 {
-    font-size: 2vh;
-    font-weight: 0;
-}
-
-h2  {
-    text-align: center;
-    font-size: 3.2vh;
-    font-weight: 900;
-}
-
-h3 {
-    font-size: 2.2vh;
-    font-weight: 0;
-    padding-top: 10px;
-}
-
-p {
-    font-size: 2vh;
-    font-weight: bold;
-    padding-top: 10px;
-
-}
-
-.miu {
+.title {
     background-color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5vh;
-    height: 6vh;
+    border-radius: 2.6vh;
+    height: 5vh;
     width: 32vh;
-    vertical-align: middle;
-    margin: auto;
-    font-weight: 900;
-    justify-content: center;
-    margin-bottom: 3vh; 
-}
-
-.logo {
+    max-width: 80vw;
+    margin: 0 auto 2vh;
+    font-size: 2.5vh;
+    font-weight: 600;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.logotipo {
-    display: flex;
-    justify-content: center;
-    width: 35%;
-    height: 70%;
-    margin-top: 30px;
-    object-fit: cover;
-    margin-bottom: 8%;
-}
-
-button {
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 7vh;
-    height: 5.2vh;
-    width: 32vh;
-    vertical-align: middle;
+.map-frame {
+    border-radius: 1.5vh;
     margin: 0 auto;
-    font-size: 30px;
-    padding-bottom: 5vh;
-    margin-bottom: 10%;
+    height: 34vh;
+    width: 40vh;
+    max-width: 80vw;
 }
 
-.acercade {
+.ques {
     background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 4vh;
-    height: 3vh;
-    width: 45vh;
-    vertical-align: middle;
-    margin: auto;
-    font-size: 30px;
-    padding-bottom: 425px;
-    margin-bottom: 10%;
+    border-radius: 2.6vh;
+    height: 5vh;
+    width: 15vh;
+    max-width: 40vw;
+    margin: 2vh auto 2vh;
+    font-size: 2.5vh;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.botones {
-    justify-content: center; 
+.text {
+    margin: 0 auto;
+    width: 40vh;
+    max-width: 80vw;
+    font-size: 1.8vh;
+    font-weight: 400;
+    color: rgb(255,255,255);
 }
+
+/* Footer */
 
 .navbar-fixed-bottom {
     position: fixed;
@@ -224,4 +149,110 @@ button {
 .icon {
     height: 5vh;
     margin: 0 10vw;
+}
+
+/* Menu */
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.menu {
+    width: 40vw;
+    height: 100vh;
+    background-color: #333;
+    padding: 25px;
+}
+
+.menu-title {
+    font-size: 1vh;
+    color: #bbb;
+    margin-bottom: 1vh;
+}
+
+.menu-options {
+    background-color: #444;
+    padding: 0; 
+    border: 0.2vh solid #fff; 
+    border-radius: 5px;
+}
+
+.menu-option {
+    display: block;
+    padding: 1.7vh 1.1vh;
+    border-bottom: 1px solid #fff; 
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-option:last-child {
+    border-bottom: none;
+}
+
+.menu-option:hover {
+    background-color: #555;
+}
+
+.menu-content {
+    margin-top: 8vh;
+    text-align: center;
+}
+
+.menu-logo-container {
+    background-color: #fff;
+    padding: 1.7vh;
+    border-radius: 1vh;
+    display: inline-block;
+}
+
+.menu-content img {
+    width: 10vh;
+    height: auto;
+}
+
+.menu h1 {
+    color: #000;
+    font-size: 3vh; 
+    margin: 1vh 0 0 0; 
+    text-align: center; 
+}
+
+.menu .highlight {
+    font-weight: bold; 
+    text-align: center;
+}
+
+.navbar-fixed-top {
+    z-index: 99;
+}
+
+.navbar-fixed-bottom {
+    z-index: 101;
+}
+
+.cursable {
+    cursor: pointer;
+}
+
+/* Acerca de */
+
+.acercade { 
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 3vh;
+    width: 78vw;
+    max-width: 40vh;
+    padding: 4vh 2vw;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.logotipo {
+    height: 20vh;
 }
