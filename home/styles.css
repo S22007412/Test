@@ -261,3 +261,49 @@ html {
 .cursable {
     cursor: pointer;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .navbar-fixed-top,
+body.dark-mode .logo-container,
+body.dark-mode .navbar-fixed-bottom {
+    background-color: rgb(34, 34, 34);
+}
+
+body.dark-mode .title,
+body.dark-mode .ques,
+body.dark-mode .datetime-container,
+body.dark-mode .menu {
+    background-color: rgb(55, 54, 54);
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .header-separator,
+body.dark-mode .footer-separator,
+body.dark-mode .menu-options {
+    border-color: rgb(100, 100, 100);
+}
+
+body.dark-mode .menu-option {
+    border-bottom-color: rgb(100, 100, 100);
+}
+
+body.dark-mode .menu-option:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+body.dark-mode .menu-title {
+    color: rgb(200, 200, 200);
+}
+
+body.dark-mode .menu-logo-container {
+    background-color: rgb(55, 54, 54);
+}
+
+body.dark-mode .menu h1 {
+    color: rgb(255, 255, 255);
+}
