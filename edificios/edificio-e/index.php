@@ -489,13 +489,16 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
         }
     </style>
 
-    <div class="menu hidden" id="menu">
+<div class="menu hidden" id="menu">
         <div class="menu-options">
             <a class="menu-option highlight">BARRA DE OPCIONES</a>
             <a href="https://www.uv.mx/" class="menu-option">PÁGINA DE LA UV</a>
             <a href="https://dsia.uv.mx/miuv/escritorio/login.aspx" class="menu-option">PÁGINA DE MIUV</a>
             <a href="https://www.uv.mx/pozarica/fiec/general/instalaciones/" class="menu-option">INSTALACIONES</a>
             <a href="/about/" class="menu-option">ACERCA DE</a>
+            <a href="/creators/" class="menu-option">CREADORES</a>
+            <a href="/thanks/" class="menu-option">AGRADECIMIENTOS</a>
+            <a href="/news/" class="menu-option">NOVEDADES</a>
             <a href="/login/" class="menu-option">CERRAR SESIÓN</a>
         </div>
         <div class="menu-content">
