@@ -14,3 +14,25 @@
                                 //document.querySelector('.edificio-img').style.marginBottom = '-4vh';
                             }
                         });
+
+                        
+                        // JavaScript to toggle visibility of file upload form
+                        document.getElementById('modifyButton2').addEventListener('click', function() {
+                            var form = document.querySelector('.modify-form2');
+                            if (form.style.display === 'none' || form.style.display === '') {
+                                form.style.display = 'block'; 
+                            } else {
+                                form.style.display = 'none';
+                            }
+                        });
+
+                        
+                        // JavaScript to toggle visibility of file upload form
+                        document.getElementById('modifyButton3').addEventListener('click', function() {
+                            var form = document.querySelector('.modify-form3');
+                            if (form.style.display === 'none' || form.style.display === '') {
+                                form.style.display = 'block'; 
+                            } else {
+                                form.style.display = 'none';
+                            }
+                        });
