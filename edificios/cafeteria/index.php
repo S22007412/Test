@@ -95,16 +95,16 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             
                             <!-- Show the modify button -->
                             <div class="modify-container">
-                            <button class="modify-button button-modify" id="modifyButton">Modificar</button>
-                            
-                            <!-- File upload form (hidden by default) -->
-                            <div class="modify-form" style="display: none;">
-                                <form action="" method="post" enctype="multipart/form-data">
-                                    <input class="modify-input" type="file" name="new_image" id="new_image">
-                                    <br><button class="accept-button button-modify" type="submit">Aceptar</button>
-                                </form>
+                                <button class="modify-button button-modify" id="modifyButton">Modificar</button>
+                                
+                                <!-- File upload form (hidden by default) -->
+                                <div class="modify-form" style="display: none;">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <input class="modify-input" type="file" name="new_image" id="new_image">
+                                        <br><button class="accept-button button-modify" type="submit">Aceptar</button>
+                                    </form>
+                                </div>
                             </div>
-
                         
                             <?php } ?>
                             </div>
@@ -127,45 +127,45 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         
                             <?php if(isset($_SESSION['session_type']) && $_SESSION['session_type'] == 'admin') { ?>
                                 <div class="modify-container">
-                                <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
-                                <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
-                                    <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden; resize:none;"><?php echo $informacion; ?></textarea>
-                                    <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
-                                    <button class="accept-button button-modify" type="submit">Guardar</button>
-                                </form>
-                            </div>
+                                    <button class="modify-button button-modify" onclick="toggleEditForm()">Modificar</button>
+                                    <form id="editForm" action="/php/edit-edificio-info.php" method="POST" class="hidden">
+                                        <textarea id="informacion" class="modify-textarea" name="informacion" style="overflow:hidden; resize:none;"><?php echo $informacion; ?></textarea>
+                                        <input type="hidden" name="id_edificio" value="<?php echo $id_edificio; ?>">
+                                        <button class="accept-button button-modify" type="submit">Guardar</button>
+                                    </form>
+                                </div>
 
-                            <style>
-                                .hidden { display: none; }
-                                .visible { display: block; }
-                            </style>
+                                <style>
+                                    .hidden { display: none; }
+                                    .visible { display: block; }
+                                </style>
 
-                            <script>
-                            function textAreaAdjust(element) {
-                                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                                element.style.height = "auto";
-                                element.style.height = (element.scrollHeight) + "px";
-                                window.scrollTo(0, scrollTop);
-                            }
-
-                            function toggleEditForm() {
-                                var form = document.getElementById('editForm');
-                                if (form.classList.contains('hidden')) {
-                                    form.classList.remove('hidden');
-                                    form.classList.add('visible');
-                                    textAreaAdjust(document.getElementById('informacion')); // Adjust textarea height when form is shown
-                                } else {
-                                    form.classList.remove('visible');
-                                    form.classList.add('hidden');
+                                <script>
+                                function textAreaAdjust(element) {
+                                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                    element.style.height = "auto";
+                                    element.style.height = (element.scrollHeight) + "px";
+                                    window.scrollTo(0, scrollTop);
                                 }
-                            }
 
-                            document.addEventListener('DOMContentLoaded', function() {
-                                var textarea = document.getElementById('informacion');
-                                textarea.addEventListener('input', function() {
-                                    textAreaAdjust(this);
+                                function toggleEditForm() {
+                                    var form = document.getElementById('editForm');
+                                    if (form.classList.contains('hidden')) {
+                                        form.classList.remove('hidden');
+                                        form.classList.add('visible');
+                                        textAreaAdjust(document.getElementById('informacion')); // Adjust textarea height when form is shown
+                                    } else {
+                                        form.classList.remove('visible');
+                                        form.classList.add('hidden');
+                                    }
+                                }
+
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    var textarea = document.getElementById('informacion');
+                                    textarea.addEventListener('input', function() {
+                                        textAreaAdjust(this);
+                                    });
                                 });
-                            });
                             </script>
 
                             <?php } ?>
