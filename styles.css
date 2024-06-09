@@ -63,3 +63,7 @@ p {
 .button-spacing {
     margin-top: 2.5vh;
 }
+
+.hidden {
+    display: none;
+}
