@@ -207,7 +207,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                     <br><button class="accept-button button-modify" type="submit">Aceptar</button>
                                 </form>
                             </div>
-
+                            </div>
                         
                             <?php } ?>
                             
@@ -257,7 +257,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                                     <br><button class="accept-button button-modify" type="submit">Aceptar</button>
                                 </form>
                             </div>
-
+                            </div>
                         
                             <?php } ?>
                             </div>
