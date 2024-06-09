@@ -302,7 +302,7 @@ body.dark-mode .menu-title {
 }
 
 body.dark-mode .menu-logo-container {
-    background-color: rgb(55, 54, 54);
+    border: 0.2vh solid #000;
 }
 
 body.dark-mode .text {
@@ -329,9 +329,6 @@ body.dark-mode {
     background-color: rgb(255, 255, 255);
 } 
 
-body.dark-mode .menu-logo-container h1 {
-    color: rgb(0, 0, 0);
-} 
 
 
 .clickable {
