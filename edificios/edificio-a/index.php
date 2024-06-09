@@ -273,10 +273,10 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             
                             <!-- Show the modify button -->
                             <div class="modify-container">
-                                <button class="modify-button button-modify" id="modifyButton">Modificar</button>
+                                <button class="modify-button button-modify" id="modifyButton2">Modificar</button>
                                 
                                 <!-- File upload form (hidden by default) -->
-                                <div class="modify-form" style="display: none;">
+                                <div class="modify-form2" style="display: none;">
                                     <form action="" method="post" enctype="multipart/form-data">
                                         <input class="modify-input" type="file" name="new_image" id="new_image">
                                         <br><button class="accept-button button-modify" type="submit">Aceptar</button>
