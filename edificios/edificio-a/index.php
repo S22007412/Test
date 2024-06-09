@@ -285,7 +285,6 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                             </div>
                         
                             <?php } ?>
-                            </div>
                         </div>
 
                         <!-- Horarios-->
