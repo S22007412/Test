@@ -211,6 +211,7 @@ body {
     color: #fff;
     text-decoration: none;
     text-align: left;
+    cursor: pointer;
 }
 
 .menu-option:last-child {
