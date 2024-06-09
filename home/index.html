@@ -43,18 +43,7 @@
             UBIUV: "Navega tu Campus" es una aplicación móvil innovadora diseñada para facilitar la exploración y la interacción en el entorno universitario. Con UBIUV, los estudiantes pueden navegar fácilmente por el campus, descubrir recursos clave y participar en experiencias educativas enriquecedoras, todo desde la palma de su mano. ¡Explora, aprende y conecta con UBIUV!
         </div>
 
-        <button id="darkModeToggle">Toggle Dark Mode</button>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('darkModeToggle');
-
-    toggleButton.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-    });
-});
-
-        </script>
+        
 
         <div class="navbar-fixed-bottom">
             <div class="footer-separator"></div>
@@ -87,6 +76,17 @@
             <a href="/creators/" class="menu-option">CREADORES</a>
             <a href="/thanks/" class="menu-option">AGRADECIMIENTOS</a>
             <a href="/news/" class="menu-option">NOVEDADES</a>
+            <a id="darkModeToggle" class="menu-option">MODO CLARO/OSCURO</a>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('darkModeToggle');
+    
+        toggleButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    });
+    
+            </script>
             <a href="/login/" class="menu-option">CERRAR SESIÓN</a>
         </div>
         <div class="menu-content">
