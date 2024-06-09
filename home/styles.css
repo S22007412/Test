@@ -308,7 +308,7 @@ body.dark-mode .text {
     color: black;
 }
 
-body.dark-mode .menu h1 {
+body.dark-mode h1 {
     color: rgb(55, 55, 55);
 }
 
@@ -326,4 +326,8 @@ body.dark-mode .navbar-fixed-bottom {
 
 body.dark-mode {
     background-color: rgb(255, 255, 255);
+} 
+
+body.dark-mode .menu-logo-container h1 {
+    color: rgb(0, 0, 0);
 } 
