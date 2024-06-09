@@ -25,41 +25,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
     // Debug: Output the target file path
-    //echo "Target file path: $target_file<br>";
+    echo "Target file path: $target_file<br>";
 
     // Check if image file is an actual image or fake image
     $check = getimagesize($_FILES['new_image']['tmp_name']);
     if ($check !== false) {
-        //echo "File is an image - " . $check['mime'] . ".";
+        echo "File is an image - " . $check['mime'] . ".";
     } else {
-        //echo "File is not an image.";
+        echo "File is not an image.";
         $uploadOk = 0;
     }
 
     // Check file size (5MB max)
     if ($_FILES['new_image']['size'] > 5000000) {
-        //echo "Sorry, your file is too large.";
+        echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
 
     // Allow certain file formats
     $allowed_formats = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
     if (!in_array($imageFileType, $allowed_formats)) {
-        //echo "Sorry, only JPG, JPEG, PNG, GIF, and WEBP files are allowed.";
+        echo "Sorry, only JPG, JPEG, PNG, GIF, and WEBP files are allowed.";
         $uploadOk = 0;
     }
 
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
-        //echo "Sorry, your file was not uploaded.";
+        echo "Sorry, your file was not uploaded.";
     } else {
         // If everything is ok, try to upload file
         if (move_uploaded_file($_FILES['new_image']['tmp_name'], $target_file)) {
-            //echo "The file " . htmlspecialchars(basename($_FILES['new_image']['name'])) . " has been uploaded.";
+            echo "The file " . htmlspecialchars(basename($_FILES['new_image']['name'])) . " has been uploaded.";
 
             // Debug: Check if file exists after upload
             if (file_exists($target_file)) {
-                //echo "File uploaded successfully and found at $target_file.";
+                echo "File uploaded successfully and found at $target_file.";
 
                 // Read current image paths
                 $image_paths = read_image_paths($json_file_path);
@@ -70,10 +70,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['new_image'])) {
                 // Save the updated paths back to the JSON file
                 write_image_paths($json_file_path, $image_paths);
             } else {
-                //echo "File upload appears to have failed, file not found at $target_file.";
+                echo "File upload appears to have failed, file not found at $target_file.";
             }
         } else {
-            //echo "Sorry, there was an error uploading your file.";
+            echo "Sorry, there was an error uploading your file.";
         }
     }
 }
