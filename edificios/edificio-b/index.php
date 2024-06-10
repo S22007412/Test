@@ -192,6 +192,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     <div class="slide-content">
                         <button class="button-classroom" onclick="toggleBox('clasroom1')">Biblioteca</button>
                         <div class="info-classroom" id="clasroom1" style="display: none;">
+                        <img class="classroom-info-img" src="/assets/salones/biblioteca.png">
                             <?php 
                                 $id_salon = '8';
                                 $id_edificio = '2';
@@ -200,6 +201,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         </div>
                         <button class="button-classroom" onclick="toggleBox('classroom2')">Laboratorio de Control</button>
                         <div class="info-classroom" id="classroom2" style="display: none;">
+                        <img class="classroom-info-img" src="/assets/salones/lab-control.png">
                             <?php 
                                 $id_salon = '10';
                                 $id_edificio = '2';

@@ -192,6 +192,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     <div class="slide-content">
                         <button class="button-classroom" onclick="toggleBox('clasroom1')">G-3</button>
                         <div class="info-classroom" id="clasroom1" style="display: none;">
+                        <img class="classroom-info-img" src="/assets/salones/g-3.png">
                             <?php 
                                 $id_salon = '4';
                                 $id_edificio = '3';
