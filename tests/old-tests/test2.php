@@ -55,18 +55,13 @@
                     ?>
                 </h3>
             </div>
-            <?php
-            
-            if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) {
-                ?>
+            <?php if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) { ?>
                 <div class="modificar">
                     <button>
                         Admin y estudiante
                     </button>
                 </div>
-            <?php
-            }
-            ?>
+            <?php } ?>
 
             <?php
             
