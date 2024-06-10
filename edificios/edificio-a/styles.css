@@ -508,4 +508,6 @@ html {
 
 .classroom-info-img {
     width: 100%;
+    margin-bottom: 1.2vh;
+    border-radius: 2vh;
 }
