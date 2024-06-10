@@ -78,7 +78,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="pagination">
                             <span class="dot active"></span>
                             <span class="dot"></span>
-                            <span class="dot"></span>
+                            <?php if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) { ?> <span class="dot"></span> <?php } ?>
                             <span class="dot"></span>
                         </div>
                     </div>
@@ -185,7 +185,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="pagination">
                             <span class="dot"></span>
                             <span class="dot active"></span>
-                            <span class="dot"></span>
+                            <?php if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) { ?> <span class="dot"></span> <?php } ?>
                             <span class="dot"></span>
                         </div>
                     </div>
@@ -224,7 +224,9 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                     
                     
                 </div>
-
+                        
+                
+                <?php if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) { ?> 
                 <div class="slide" id="slide-3">
                     <div class="slider-container">
                         <div class="slide-header">
@@ -401,6 +403,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         
                 </div>
                 </div>
+                <?php } ?>
 
                 <div class="slide" id="slide-4">
                     <div class="slider-container">
@@ -412,7 +415,7 @@ $relative_target_file = isset($image_paths[$page_tag]) ? $image_paths[$page_tag]
                         <div class="pagination">
                             <span class="dot"></span>
                             <span class="dot"></span>
-                            <span class="dot"></span>
+                            <?php if(isset($_SESSION['session_type']) && ($_SESSION['session_type'] == 'admin' || $_SESSION['session_type'] == 'student')) { ?> <span class="dot"></span> <?php } ?>
                             <span class="dot active"></span>
                         </div>
                     </div>
