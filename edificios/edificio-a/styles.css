@@ -505,3 +505,7 @@ html {
 .cursable {
     cursor: pointer;
 }
+
+.classroom-info-img {
+    width: 100%;
+}
